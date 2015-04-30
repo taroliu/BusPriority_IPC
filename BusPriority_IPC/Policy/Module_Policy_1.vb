@@ -30,6 +30,8 @@ Module Module_Policy_1
         BusComm_TimeStamp = Now
 
         Try
+
+
             Try
                 If SaveString(0) = "A1" Then
 
@@ -50,6 +52,14 @@ Module Module_Policy_1
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText(" Error FiveFB4 BusLineID GoBack BusID " + ex.Message)
                         End Try
+
+                        Try
+                            'FiveFB4.Add("P12", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+                            FiveFB4.Add("P1", Now.ToString("yyyy-MM-dd HH:mm:ss"))
+                        Catch ex As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P12 P1 " + ex.Message)
+                        End Try
+
 
                     Else
                         Dim pp As String = " "
@@ -74,7 +84,7 @@ Module Module_Policy_1
                     End If
 
                     'If SpeedKeepHash.ContainsKey(arriveBusID) Then
-                    '    Dim orgTime As DateTime = SpeedKeepHash.Item(arriveBusID)
+                    'Dim orgTime As DateTime = SpeedKeepHash.Item(arriveBusID)
 
                     '    Dim DiffSecond As Long = DateDiff(DateInterval.Second, orgTime, Now)
                     '    '_mainForm.Show_LBox_PolicyRightNowText(" orgTime " + orgTime.ToString + " DiffSecond " + DiffSecond.ToString)
@@ -235,13 +245,13 @@ Module Module_Policy_1
 
 
                                 Try
-                                    FiveFB4.Add("P12", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+                                    'FiveFB4.Add("P12", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                                     FiveFB4.Add("P1", Now.ToString("yyyy-MM-dd HH:mm:ss"))
                                 Catch ex As Exception
                                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P12 P1 " + ex.Message)
                                 End Try
 
-                                
+
 
                                 'tranStr = "5F48"                    '5F48  查詢目前時制
                                 'sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
@@ -262,7 +272,7 @@ Module Module_Policy_1
                                 ActivatedBusID.Remove(SaveString(2))
 
                                 Try
-                                    FiveFB4.Add("P32", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+                                    'FiveFB4.Add("P32", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                                     FiveFB4.Add("P3", Now.ToString("yyyy-MM-dd HH:mm:ss"))
                                 Catch ex As Exception
                                     _mainForm.Show_LBox_PolicyRightNowText(" Error FiveFB4 P32 P3 " + ex.Message)
@@ -298,13 +308,15 @@ Module Module_Policy_1
                                 '_mainForm.Show_LBox_PolicyRightNowText("5FB4 message " + tempstr)
 
                                 FiveFB4.Clear()
+                                'BusComm_CommunicationStamp.Clear()
+                                BusComm_CommunicationStamp.Remove(nowPlayBusID)
                                 nowPlayBusID = "-1"
-                                BusComm_CommunicationStamp.Clear()
+
                                 _mainForm.Show_LBox_PolicyRightNowText("*****************************************************************************************************************************************")
                             ElseIf DataStructTouchPoint.PointType.ToString = "02" Then
 
                                 Try
-                                    FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+                                    'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                                     FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
 
                                 Catch ex As Exception
@@ -312,7 +324,7 @@ Module Module_Policy_1
                                 End Try
 
 
-                              
+
 
                             End If
 
@@ -320,9 +332,9 @@ Module Module_Policy_1
                             _mainForm.Show_LBox_PolicyRightNowText("<" + arriveBusID + ">收到訊息 A2:StopID=" + SaveString(7) + "  不在觸動表單內")
 
                             If arriveBusID = nowPlayBusID Then
-
+                                BusComm_CommunicationStamp.Remove(nowPlayBusID)
                                 nowPlayBusID = "-1"
-                                BusComm_CommunicationStamp.Clear()
+                                'BusComm_CommunicationStamp.Clear()
                             End If
 
 
@@ -333,17 +345,7 @@ Module Module_Policy_1
                     _mainForm.Show_LBox_PolicyRightNowText("<" + arriveBusID + ">已有公車<" + nowPlayBusID + ">執行中,收到訊息 " + SaveString(0) + "無效")
 
 
-                    Dim BusComm_LastTime As DateTime = BusComm_CommunicationStamp(nowPlayBusID)
-
-                    Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_LastTime, Now)
-
-                    If DiffSecond > 300 Then
-
-                        nowPlayBusID = "-1"
-                        A1_Counter = 0
-                        BusComm_CommunicationStamp.Clear()
-
-                    End If
+                    
 
                 End If
             Else 'Jason 20150122 TestMode
@@ -456,6 +458,14 @@ Module Module_Policy_1
 
 
                 _mainForm.Show_LBox_PolicyRightNowText(" 公車優先策略啟動 1")
+
+                Try
+                    'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+                    FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
+
+                Catch ex As Exception
+                    _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
+                End Try
 
                 Dim CrossRoadID As String = _mainForm.TBox_CrossRoadID.Text.ToString
                 'Dim BusLineID As String = Current_BusLineID
@@ -1090,6 +1100,14 @@ Module Module_Policy_1
 
 
                 _mainForm.Show_LBox_PolicyRightNowText(" 公車優先策略啟動 2")
+
+                Try
+                    'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+                    FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
+
+                Catch ex As Exception
+                    _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
+                End Try
 
                 Dim CrossRoadID As String = _mainForm.TBox_CrossRoadID.Text.ToString
                 'Dim BusLineID As String = Current_BusLineID

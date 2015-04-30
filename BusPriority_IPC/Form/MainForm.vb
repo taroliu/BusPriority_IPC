@@ -156,8 +156,9 @@ Public Class MainForm
             If LBox_PolicyExecute.Items.Count > LBox_limit Then
                 LBox_PolicyExecute.Items.RemoveAt(0)
             End If
+            WriteLog(curPath, "Strategy_log", [text], _logEnable) 'Why does it appear twice??
         End If
-        WriteLog(curPath, "Strategy_log", [text], _logEnable)
+
     End Sub
 
     Public Sub Show_BusPolicyText(ByVal [text] As String)
@@ -463,8 +464,21 @@ Public Class MainForm
         'isResponeUserDefine_0F80("AABB34003F00285F1040FFAACC00")
         'Report5F03Xml("0001", "0002", "5F035055040301000F81448181")
         'SaveDataFunction("AABB21FFFF001C5F1601020800010D00050101AACC11")
-        SaveDataFunction("AABB21FFFF001C5F8000AACC11")
-        SetIPC_ConnectError(True)
+        'SaveDataFunction("AABB21FFFF001C5F8000AACC11")
+        'SetIPC_ConnectError(True)
+        'Dim Testtime As DateTime
+        'Dim Testtime2 As DateTime
+        'Dim DiffYear As Integer = DateDiff(DateInterval.Year, Testtime, Now)
+        'If DiffYear > 1 Then
+        '    _mainForm.Show_LBox_PolicyRightNowText("Busted Empty Date Time")
+        'End If
+        'Testtime = "2015-03-27 16:54:29.000"
+        'Testtime2 = "2015-03-27 17:54:29.000"
+        '_mainForm.Show_LBox_PolicyRightNowText("Time " + Testtime)
+        'If Testtime2 > Testtime Then
+        '    _mainForm.Show_LBox_PolicyRightNowText("Testtime2 is the Latest")
+        'End If
+
     End Sub
 
     Private Sub Timer_Connect_TCP_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Connect_TCP.Tick
@@ -573,6 +587,7 @@ Public Class MainForm
                     nowPlayBusID = "-1"
                     SlowBusID.Clear()
                     ActivatedBusID.Clear()
+                    BusComm_CommunicationStamp.Clear()
 
                 Else
                     '_mainForm.Show_LBox_PolicyRightNowText("Communicating with Bus ")
@@ -582,6 +597,31 @@ Public Class MainForm
 
 
             End If
+
+
+
+            Try
+                If nowPlayBusID <> "-1" Then
+
+                    Dim BusComm_LastTime As DateTime = BusComm_CommunicationStamp(nowPlayBusID)
+
+                    Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_LastTime, Now)
+
+                    If DiffSecond > 300 Then
+
+                        nowPlayBusID = "-1"
+                        A1_Counter = 0
+                        'BusComm_CommunicationStamp.Clear()
+                        BusComm_CommunicationStamp.Remove(nowPlayBusID)
+
+                    End If
+
+                End If
+
+            Catch ex As Exception
+                _mainForm.Show_LBox_PolicyRightNowText("ErrorBusComm_CommunicationStamp" + ex.Message)
+            End Try
+           
 
 
 

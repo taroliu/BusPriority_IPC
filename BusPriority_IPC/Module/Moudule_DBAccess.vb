@@ -470,19 +470,51 @@ Module Moudule_DBAccess
     Public Sub BusStrategy_Log(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal BusPhase As String, ByVal Bus2CrossRoad As String, ByVal Strategy As String, ByVal Currentphase As String, ByVal P1 As String, ByVal P2 As String, ByVal P3 As String)
 
         Try
+            Dim timedata As Boolean = True
+            Dim Ptime = {P1, P2, P3}
+            '_mainForm.Show_LBox_PolicyRightNowText("PTime 1 " + Ptime(0))
+            '_mainForm.Show_LBox_PolicyRightNowText("PTime 2 " + Ptime(1))
+            '_mainForm.Show_LBox_PolicyRightNowText("PTime 3 " + Ptime(2))
+            Try
+               
+                For index As Integer = 0 To 2
+                    Dim temptime As DateTime = Ptime(index)
+                    Dim DiffYear As Integer = DateDiff(DateInterval.Hour, temptime, Now)
+                    If DiffYear > 1 Then
+                        timedata = False
+                    End If
+                Next index
 
-            Dim sql_insert As String = "INSERT BusStrategy_Log (GroupID,CrossRoadID,BusID,BusLineID,GoBack,BusPhase,Bus2CrossRoad,Strategy,Currentphase,P1,P2,P3) " +
-                        "VALUES ('" + Trim(GroupID) + "','" + Trim(CrossRoadID) + "','" + Trim(BusID) + "','" + Trim(BusLineID) + "','" +
-                                      Trim(GoBack) + "','" + Trim(BusPhase) + "','" + Trim(Bus2CrossRoad) + "','" + Trim(Strategy) + "','" + Trim(Currentphase) + "','" + Trim(P1) + "','" + Trim(P2) + "','" + Trim(P3) + "')"
-            'Dim connection As New SqlConnection(connectionString)
+                If Ptime(0) > Ptime(1) Or Ptime(1) > Ptime(2) Or Ptime(0) > Ptime(2) Then
+                    timedata = False
+                Else
+                    timedata = True
+                End If
 
-            Dim adapter_insert As New SqlDataAdapter(sql_insert, connection)
-            connection.Open()
-            adapter_insert.UpdateCommand = connection.CreateCommand
-            adapter_insert.UpdateCommand.CommandText = sql_insert
-            adapter_insert.UpdateCommand.ExecuteNonQuery()
-            connection.Close()
-            adapter_insert.Dispose()
+            Catch ex As Exception
+                _mainForm.Show_LBox_PolicyRightNowText("Time Data Error " + ex.Message)
+                timedata = False
+            End Try
+
+
+            If Bus2CrossRoad Is Nothing Or Bus2CrossRoad = "" Or Strategy Is Nothing Or Strategy = "" Or Currentphase Is Nothing Or Currentphase = "00000000" Or Currentphase = "" Or timedata = False Then
+                _mainForm.Show_LBox_PolicyRightNowText("Missing Data")
+
+            Else
+                Dim sql_insert As String = "INSERT BusStrategy_Log (GroupID,CrossRoadID,BusID,BusLineID,GoBack,BusPhase,Bus2CrossRoad,Strategy,Currentphase,P1,P2,P3) " +
+                      "VALUES ('" + Trim(GroupID) + "','" + Trim(CrossRoadID) + "','" + Trim(BusID) + "','" + Trim(BusLineID) + "','" +
+                                    Trim(GoBack) + "','" + Trim(BusPhase) + "','" + Trim(Bus2CrossRoad) + "','" + Trim(Strategy) + "','" + Trim(Currentphase) + "','" + Trim(P1) + "','" + Trim(P2) + "','" + Trim(P3) + "')"
+                'Dim connection As New SqlConnection(connectionString)
+
+                Dim adapter_insert As New SqlDataAdapter(sql_insert, connection)
+                connection.Open()
+                adapter_insert.UpdateCommand = connection.CreateCommand
+                adapter_insert.UpdateCommand.CommandText = sql_insert
+                adapter_insert.UpdateCommand.ExecuteNonQuery()
+                connection.Close()
+                adapter_insert.Dispose()
+
+            End If
         Catch ex As Exception
             WriteLog(curPath, "Moudule_DBAccess", "NewTriggerPoint Catch:" + ex.Message, _logEnable)
         End Try
@@ -535,7 +567,7 @@ Module Moudule_DBAccess
     '*********************************************************
     Public Sub initComBusLineDate()
         Try
-            Dim sql As String = "SELECT BusLineID,BusLine_Name,CrossRoadID,BusLine_Order,GoBack,Direct,BusSubPhaseID FROM BusLine_Info_Tab  Order BY  BusLineID,CrossRoadID,BusLine_Order  "
+            Dim sql As String = "SELECT BusLineID,BusLine_Name,CrossRoadID,BusLine_Order,GoBack,Direct,BusSubPhaseID FROM [TaoyuanBusPrim].[dbo].[BusLine_Info_Tab]  Order BY  BusLineID,CrossRoadID,BusLine_Order  "
 
             'Dim connection As New SqlConnection(connectionString)
             Dim dataadapter As New SqlDataAdapter(sql, connection)
