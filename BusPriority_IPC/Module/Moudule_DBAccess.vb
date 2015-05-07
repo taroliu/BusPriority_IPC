@@ -497,7 +497,8 @@ Module Moudule_DBAccess
             End Try
 
 
-            If Bus2CrossRoad Is Nothing Or Bus2CrossRoad = "" Or Strategy Is Nothing Or Strategy = "" Or Currentphase Is Nothing Or Currentphase = "00000000" Or Currentphase = "" Or timedata = False Then
+
+            If Strategy <> "55" And (Bus2CrossRoad Is Nothing Or Bus2CrossRoad = "" Or Strategy Is Nothing Or Strategy = "" Or Currentphase Is Nothing Or Currentphase = "00000000" Or Currentphase = "" Or timedata = False) Then
                 _mainForm.Show_LBox_PolicyRightNowText("Missing Data")
 
             Else
