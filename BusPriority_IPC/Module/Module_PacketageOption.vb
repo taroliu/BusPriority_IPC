@@ -175,11 +175,13 @@ Module Module_PacketageOption
         Try
             _poolSeqNumber.WaitOne()
             SeqNum = (SeqNum + 1) Mod 255
-            Return SeqNum
             _poolSeqNumber.Release()
+            Return SeqNum
+
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
             WriteLog(curPath, "Module_Packetage", "  getSeqNum Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+
             Return False
         End Try
     End Function
