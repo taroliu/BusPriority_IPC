@@ -35,7 +35,7 @@ Module Module_Policy_1
             Try
                 If SaveString(0) = "A1" Then
 
-                    If A1_Counter = 0 Then
+                    If A1_Counter = 0 And _mainForm.Label_BusPrimEnable.Text = "啟動" Then
                         Dim sendByte As Byte()
                         Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
                         tranStr = tranStr + TotalCycleMin
@@ -189,7 +189,7 @@ Module Module_Policy_1
                         End If
 
 
-                        If A1_Counter = 0 Then
+                        If A1_Counter = 0 And _mainForm.Label_BusPrimEnable.Text = "啟動" Then
                             Dim sendByte As Byte()
                             Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
                             tranStr = tranStr + TotalCycleMin
@@ -200,7 +200,7 @@ Module Module_Policy_1
                         End If
 
 
-                        If A1_Counter = 3 Then
+                        If A1_Counter = 3 And _mainForm.Label_BusPrimEnable.Text = "啟動" Then
                             Command2("5F4C")
                             A1_Counter = 1
 

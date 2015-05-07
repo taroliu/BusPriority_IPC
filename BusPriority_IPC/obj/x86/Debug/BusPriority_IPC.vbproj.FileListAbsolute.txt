@@ -1,0 +1,9 @@
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\bin\Debug\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\bin\Debug\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\bin\Debug\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Debug\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Debug\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Debug\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Debug\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Debug\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Debug\BusPriority_IPC.pdb

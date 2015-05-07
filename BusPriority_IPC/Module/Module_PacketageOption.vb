@@ -1,11 +1,13 @@
-﻿Module Module_PacketageOption
+﻿Imports System.Threading
+
+Module Module_PacketageOption
     '接收設備封包,皆放至ArrayPool,進行檢查,是否串接,是否分段,再產出
     'S------------------------------------------------------------------------------------------------
     Public AcceptPoolArray(1024) As Byte
     Public AcceptPoolArrayLength As Integer = 0
 
     Public SeqNum As Integer
-
+    Public _poolSeqNumber As Semaphore
     Public Function getComplishPacket() As String
         Dim newToken As Integer = 0
         Try
@@ -171,8 +173,10 @@
 
     Public Function getSeqNum() As Integer
         Try
+            _poolSeqNumber.WaitOne()
             SeqNum = (SeqNum + 1) Mod 255
             Return SeqNum
+            _poolSeqNumber.Release()
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
             WriteLog(curPath, "Module_Packetage", "  getSeqNum Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)

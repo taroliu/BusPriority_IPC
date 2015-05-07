@@ -5,7 +5,6 @@ Imports System.IO
 
 Public Class MainForm
     Dim init_finish As Boolean
-
     '*********************************************************
     '**
     '** Delegate
@@ -175,63 +174,95 @@ Public Class MainForm
     '** MainForm
     '**
     '*********************************************************
+    'DB Erro AutoClose Application 201505041400
+    'S---------------------------------------------------------------------------------------
+    Private Sub CloseAP_Thread()
+        Dim t As New Threading.Thread(AddressOf closeMsgbox)
+        t.Start() '10 second delay
+    End Sub
+    Private Sub closeMsgbox()
+        Threading.Thread.Sleep(10 * 1000)
+        If SelectCloseMessageboxFlag = 999 Then
+            Environment.Exit(Environment.ExitCode)
+            Application.Exit()
+        End If
+    End Sub
+    Private SelectCloseMessageboxFlag As Integer
+    'E---------------------------------------------------------------------------------------
     Private Sub MainForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Try
+            init_finish = False
+            Module_Comm._mainForm = Me '20131216介面承接LCS燈號 下載成功訊息.
+            iniSemaphore()
+            setWorkFolderPath()
+            getAll_ParamINI()
+            SelectCloseMessageboxFlag = 999
+            If DB_ACCESS_ENABLE = "1" Then
+                If isConnectDataBase() = False Then
+                    DB_Error = True
+                    'DB Erro AutoClose Application 201505041400
+                    'S--------------------------------------------------------------------------------------------------
+                    WriteLog(curPath, "systeminfo", "資料庫連結錯誤!系統將自動關閉...", _logEnable)
+                    CloseAP_Thread()
+                    If MessageBox.Show("資料庫連結錯誤!", "請確認", MessageBoxButtons.OK, MessageBoxIcon.Error) = 1 Then
+                        SelectCloseMessageboxFlag = 1
+                    End If
+                    'E--------------------------------------------------------------------------------------------------
+                Else
 
-        init_finish = False
-        Module_Comm._mainForm = Me '20131216介面承接LCS燈號 下載成功訊息.
-        iniSemaphore()
-        setWorkFolderPath()
-        getAll_ParamINI()
-        If DB_ACCESS_ENABLE = "1" Then
-            If isConnectDataBase() = False Then
-                DB_Error = True
-                MessageBox.Show("資料庫連結錯誤!", "請確認", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Else
-                DB_Error = False
-                'jason 20150413 檢查表格及檢視表是否存在
-                'S-------------------------------------------------------------------------
-                If DB_Check = "1" Then
-                    DB_CheckTable()
+                    DB_Error = False
+                    'jason 20150413 檢查表格及檢視表是否存在
+                    'S-------------------------------------------------------------------------
+                    If DB_Check = "1" Then
+                        DB_CheckTable()
+                    End If
+                    'E-------------------------------------------------------------------------
                 End If
-                'E-------------------------------------------------------------------------
             End If
-        End If
 
-        init_Layout()
-        If DB_ACCESS_ENABLE = "1" Then
-            initCrossRoad2TreeView()
-        End If
+            init_Layout()
+            If DB_ACCESS_ENABLE = "1" Then
+                initCrossRoad2TreeView()
+            End If
 
-        Panel_Select(1)
+            Panel_Select(1)
 
-        'Open Comm
-        OpenSerialPort()
-        OpenCC_Com()
-        OpenATMS_Com() 'Jason 20140926 ATMS Connect
-        OpenCar_Com()
+            'Open Comm
+            OpenSerialPort()
+            OpenCC_Com()
+            OpenATMS_Com() 'Jason 20140926 ATMS Connect
+            OpenCar_Com()
 
 
-        Me.Text = "公車優先路側設備(群組-" + COMMON_GroupID + "-" + COMMON_GroupName + ")         ********* BuildDay [" + HexStringTOIntString(VersionYear, 2) +
-                  "/" + HexStringTOIntString(VersionMonth, 2) + "/" + HexStringTOIntString(VersionDay, 2) + "] Version [" + VersionID.Substring(0, 1) + "." +
-                  VersionID.Substring(1, 1) + "] ********* " 'jason 20150413 Form加版本於TITLE
-        Timer_Connect_TCP.Enabled = True
+            Me.Text = "公車優先路側設備(群組-" + COMMON_GroupID + "-" + COMMON_GroupName + ")         ********* BuildDay [" + HexStringTOIntString(VersionYear, 2) +
+                      "/" + HexStringTOIntString(VersionMonth, 2) + "/" + HexStringTOIntString(VersionDay, 2) + "] Version [" + VersionID.Substring(0, 1) + "." +
+                      VersionID.Substring(1, 1) + "] ********* " 'jason 20150413 Form加版本於TITLE
+            Timer_Connect_TCP.Enabled = True
 
-        ToolStripStatusLabel1.Text = "系統啟動時間:" + Date.Now.ToString("yyyy/MM/dd HH:mm:ss ")
-        RunOTAResponse() 'Jason 20150205 OTA Modify
-        SetAutoLoad5F46() 'Jason20150205 自動查詢時段資料放進XML,供中心查詢.
-        init_finish = True
+            ToolStripStatusLabel1.Text = "系統啟動時間:" + Date.Now.ToString("yyyy/MM/dd HH:mm:ss ")
+            RunOTAResponse() 'Jason 20150205 OTA Modify
+            SetAutoLoad5F46() 'Jason20150205 自動查詢時段資料放進XML,供中心查詢.
+            init_finish = True
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "MainForm", "  MainForm_Load Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+        End Try
     End Sub
 
     Private Sub But_IC_Download_Click(sender As System.Object, e As System.EventArgs) Handles But_IC_Download.Click
-        Dim sendByte As Byte()
-        Dim tranStr As String = TBox_IC_Download.Text
-        tranStr = tranStr.Replace(" ", "")
-        tranStr = tranStr.Replace("H", "")
-        tranStr = tranStr.Replace("+", "")
-        sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
-        Thread.Sleep(100)
-        send_IC_Manual(sendByte)
-
+        Try
+            Dim sendByte As Byte()
+            Dim tranStr As String = TBox_IC_Download.Text
+            tranStr = tranStr.Replace(" ", "")
+            tranStr = tranStr.Replace("H", "")
+            tranStr = tranStr.Replace("+", "")
+            sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
+            Thread.Sleep(100)
+            send_IC_Manual(sendByte)
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "MainForm", "  But_IC_Download_Click Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+        End Try
     End Sub
     Public Sub send_IC_Manual(ByVal sendData As Byte())
         Try
@@ -385,15 +416,20 @@ Public Class MainForm
     End Sub
     Public TimeSegmentFlag As Integer = 0
     Private Sub LinkLabel_Seg1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_Seg1.LinkClicked
-        Dim SelecNodeItemID As String
-        TimeSegmentFlag = 0
-        If Not TView_CrossRoad.SelectedNode Is Nothing Then
-            SelecNodeItemID = TView_CrossRoad.SelectedNode.Text
-        Else
-            SelecNodeItemID = TView_CrossRoad.Nodes(0).Text
-        End If
-        SelecNodeItemID = SelecNodeItemID.Substring(SelecNodeItemID.IndexOf("[") + 1, SelecNodeItemID.IndexOf("]") - SelecNodeItemID.IndexOf("[") - 1)
-        initComSegmentCom2DGridView(SelecNodeItemID)
+        Try
+            Dim SelecNodeItemID As String
+            TimeSegmentFlag = 0
+            If Not TView_CrossRoad.SelectedNode Is Nothing Then
+                SelecNodeItemID = TView_CrossRoad.SelectedNode.Text
+            Else
+                SelecNodeItemID = TView_CrossRoad.Nodes(0).Text
+            End If
+            SelecNodeItemID = SelecNodeItemID.Substring(SelecNodeItemID.IndexOf("[") + 1, SelecNodeItemID.IndexOf("]") - SelecNodeItemID.IndexOf("[") - 1)
+            initComSegmentCom2DGridView(SelecNodeItemID)
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "MainForm", "  LinkLabel_Seg1_LinkClicked Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+        End Try
     End Sub
 
     Private Sub LinkLabel_Seg2_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_Seg2.LinkClicked
@@ -478,7 +514,11 @@ Public Class MainForm
         'If Testtime2 > Testtime Then
         '    _mainForm.Show_LBox_PolicyRightNowText("Testtime2 is the Latest")
         'End If
-
+        Dim t As New Threading.Thread(AddressOf closeMsgbox)
+        t.Start(5) '10 second delay
+        MsgBox("資料庫連結錯誤!系統將自動關閉...")
+        Environment.Exit(Environment.ExitCode)
+        Application.Exit()
     End Sub
 
     Private Sub Timer_Connect_TCP_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Connect_TCP.Tick
@@ -505,7 +545,6 @@ Public Class MainForm
     '****************************************************************************
 
     Private Sub Timer_AnalysisLightOutBySoft_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_AnalysisLightOutBySoft.Tick
-
         If orgNowSignalStatusString <> NowSignalStatusString Then
             Dim LightOut2IntArray As Integer() = getLightOut_LightStepBySoftWare(NowSignalStatusString)
             ShowReceiveLightStatusSoftWare(LightOut2IntArray)  '顯示在Form上
@@ -621,7 +660,7 @@ Public Class MainForm
             Catch ex As Exception
                 _mainForm.Show_LBox_PolicyRightNowText("ErrorBusComm_CommunicationStamp" + ex.Message)
             End Try
-           
+
 
 
 
@@ -813,40 +852,38 @@ Public Class MainForm
     '<補>如果IC沒收到,需再傳送三次
     Public complete_5F10_AutoDownload As Integer = 0     'what is this for???  1? 0?
     Private Sub Timer_SegmentAutoSend_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_SegmentAutoSend.Tick
-        If initBusPrimEnble = 1 Then
+        Try
+            If initBusPrimEnble = 1 Then
 
-            If complete_5F10_AutoDownload = 1 Then
-                Dim sendByte As Byte()
-                Dim tranStr As String = "5F3F0200"
-                sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
-                send_IC(sendByte)
-                Timer_SegmentAutoSend.Stop()
+                If complete_5F10_AutoDownload = 1 Then
+                    Dim sendByte As Byte()
+                    Dim tranStr As String = "5F3F0200"
+                    sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
+                    send_IC(sendByte)
+                    Timer_SegmentAutoSend.Stop()
+                End If
+                If complete_5F10_AutoDownload = 0 Then
+                    Dim sendByte As Byte()
+                    Dim tranStr As String = "5F101400"
+                    sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
+                    'send_IC(sendByte)
+                    complete_5F10_AutoDownload = 1
+                End If
+            ElseIf initBusPrimEnble = 2 Then
+
+                If complete_5F10_AutoDownload = 0 Then
+                    Dim sendByte As Byte()
+                    Dim tranStr As String = "5F100400"
+                    sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
+                    'send_IC(sendByte)
+                    Timer_SegmentAutoSend.Stop()
+                End If
+
             End If
-            If complete_5F10_AutoDownload = 0 Then
-                Dim sendByte As Byte()
-                Dim tranStr As String = "5F101400"
-                sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
-                'send_IC(sendByte)
-                complete_5F10_AutoDownload = 1
-            End If
-        ElseIf initBusPrimEnble = 2 Then
-
-            If complete_5F10_AutoDownload = 0 Then
-                Dim sendByte As Byte()
-                Dim tranStr As String = "5F100400"
-                sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
-                'send_IC(sendByte)
-                Timer_SegmentAutoSend.Stop()
-            End If
-
-        End If
-
-
-
-
-
-
-
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "MainForm", "  Timer_SegmentAutoSend_Tick Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+        End Try
     End Sub
 
     '****************************************************************************
@@ -919,15 +956,19 @@ Public Class MainForm
 
 
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs)
+        Try
 
-        _mainForm.Show_LBox_PolicyRightNowText("Time sent to Bus")
-        If SentTime > 0 Then
-            SendLightRemainSec(Data_A2.BusID, SentLight, SentTime)
-            SentTime = SentTime - 1
-        Else
-            Timer1.Enabled = False
-        End If
-
+            _mainForm.Show_LBox_PolicyRightNowText("Time sent to Bus")
+            If SentTime > 0 Then
+                SendLightRemainSec(Data_A2.BusID, SentLight, SentTime)
+                SentTime = SentTime - 1
+            Else
+                Timer1.Enabled = False
+            End If
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "MainForm", "  Timer1_Tick Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+        End Try
 
     End Sub
 
@@ -993,12 +1034,16 @@ Public Class MainForm
     'Jason20150114 系統對時功能
     'S---------------------------------------------------------------------------
     Private Sub Timer_Clock_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Clock.Tick
-        If Now.ToString("mm") = "00" Then
-            'send_IC(StrToByteArray2("0F42"))
-            Dim sendByte As Byte() = Incode_Step1(getSeqNum(), "0F42")
-            send_IC(sendByte)
-
-        End If
+        Try
+            If Now.ToString("mm") = "00" Then
+                'send_IC(StrToByteArray2("0F42"))
+                Dim sendByte As Byte() = Incode_Step1(getSeqNum(), "0F42")
+                send_IC(sendByte)
+            End If
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "MainForm", "  Timer_Clock_Tick Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+        End Try
     End Sub
     'E---------------------------------------------------------------------------
     'Jason20150205 自動查詢時段資料放進XML,供中心查詢.
@@ -1084,4 +1129,6 @@ Public Class MainForm
         End If
     End Sub
     'E-------------------------------------------------------------------------------------
+
+  
 End Class

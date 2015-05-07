@@ -1,0 +1,577 @@
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20140926\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141031\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141205\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC_20141215\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\BusPriority_IPC_20141223 - for field\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\Administrator\Desktop\BusPriority_IPC_20141223 - for field\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\Administrator\Desktop\BusPriority_IPC_20141223 - for field\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - field tested\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - field tested\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - field tested\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - for field 2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 1225 1200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - 複製 (4)201412252200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - limbo2 20150106\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\CECI\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 複製 (4) 201501081130\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 複製 (4) 201501081130\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 複製 (4) 201501081130\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\IS_PC_User\Desktop\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\CECI\BusPriority_IPC - 複製 (4) 201501081130 test1\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501081650\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo4 201501120920 - 複製\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo5 201501131440\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo6 201502021630\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo6 20150209\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo7 201502121440\BusPriority_IPC -limbo6 20150209\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo7 201502121640\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC -limbo8 201502131117\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502131450\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC -limbo9 201502241015\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC -limbo9 201502251330\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC -limbo9 201502251500\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC -limbo9 201502261100\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -limbo9 201503031000\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason9 201503031200\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC -Jason9 201503041000\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC -Jason10 201503100900\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503131000\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503160900\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503160900\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503160900\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Near 201503161330\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\CECI\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\CECI\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\CECI\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\CECI\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\CECI\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\CECI\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\CECI\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\CECI\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno2 201503232130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\60701\Desktop\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\60701\Desktop\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\60701\Desktop\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+D:\work\03069_Taoyuan_BusFirst\work\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC - Inferno3 201504041130\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Zju Ming\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbprojResolveAssemblyReference.cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC - Inferno3 201504132000\BusPriority_IPC\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\Visual Studio 2013\Projects\BusPriority_IPC - Vertigo1 201504170845\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.exe
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.pdb
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\BusPriority_IPC.xml
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.dll
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.dll
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.xml
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OOXML.xml
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\bin\Release\NPOI.OpenXml4Net.xml
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.MainForm.resources
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.Resources.resources
+C:\Users\62095\Documents\GitHub\BusPriority_IPC\BusPriority_IPC\obj\x86\Release\BusPriority_IPC.vbproj.GenerateResource.Cache
