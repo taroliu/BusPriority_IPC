@@ -870,7 +870,7 @@ Module Moudule_DBAccess
                 Dim ds2 As New DataSet()
                 dataadapter2.Fill(ds2, "CrossRoadTab")
                 CrossRoadList.Clear()
-                COMMON_EquipID = IntToHexString(Val(ds2.Tables(0).Rows(0).Item(7).ToString), 4)
+                COMMON_EquipID = Trim(ds2.Tables(0).Rows(0).Item(7).ToString) 'IntToHexString(Val(ds2.Tables(0).Rows(0).Item(7).ToString), 4)
                 For i As Integer = 0 To ds2.Tables(0).Rows.Count - 1
                     Dim newCrossRoad As New Class_CrossRoad(Trim(ds2.Tables(0).Rows(i).Item(0).ToString), Trim(ds2.Tables(0).Rows(i).Item(1).ToString),
                                                             Trim(ds2.Tables(0).Rows(i).Item(2).ToString), Trim(ds2.Tables(0).Rows(i).Item(3).ToString),
