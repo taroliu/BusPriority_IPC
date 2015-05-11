@@ -575,15 +575,15 @@ Public Class MainForm
         Try
             ' _mainForm.Show_LBox_PolicyRightNowText("download " + complete_5F48_AutoDownload.ToString)
 
-            If complete_5F48_AutoDownload = 3 Then
+            If complete_5F48_AutoDownload = 3 And Changed_Planid = True Then
                 setNowIC_Param_5F45(Data_5F18.PlanID)
                 complete_5F48_AutoDownload = 0
             End If
-            If complete_5F48_AutoDownload = 2 Then
+            If complete_5F48_AutoDownload = 2 And Changed_Planid = True Then
                 setNowIC_Param_5F44(Data_5F18.PlanID)
                 complete_5F48_AutoDownload = 3
             End If
-            If complete_5F48_AutoDownload = 1 Then
+            If complete_5F48_AutoDownload = 1 And Changed_Planid = True Then
                 setNowIC_Param_5F43(Data_5F18.PhaseOrder)
                 complete_5F48_AutoDownload = 2
             End If
