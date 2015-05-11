@@ -514,11 +514,7 @@ Public Class MainForm
         'If Testtime2 > Testtime Then
         '    _mainForm.Show_LBox_PolicyRightNowText("Testtime2 is the Latest")
         'End If
-        Dim t As New Threading.Thread(AddressOf closeMsgbox)
-        t.Start(5) '10 second delay
-        MsgBox("資料庫連結錯誤!系統將自動關閉...")
-        Environment.Exit(Environment.ExitCode)
-        Application.Exit()
+        SetIPC_ConnectError(False)
     End Sub
 
     Private Sub Timer_Connect_TCP_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Connect_TCP.Tick

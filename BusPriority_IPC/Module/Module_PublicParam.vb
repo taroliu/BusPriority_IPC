@@ -106,7 +106,7 @@ Module Module_PublicParam
     Public DB_Error As Boolean
 
     Public DB_Check As String 'jason 20150413 檢查表格及檢視表是否存在
-    Public HardWareStatusFrom0F04 As String = "00" 'jason 20150413 設備異常回報加IPC設備連線異常
+    Public HardWareStatusFrom0F04 As String = "0000" 'jason 20150413 設備異常回報加IPC設備連線異常
     '-- Other Param
     Public LBox_limit As Integer
     Public WDRemoteIP As String

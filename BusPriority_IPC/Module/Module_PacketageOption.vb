@@ -211,7 +211,7 @@ Module Module_PacketageOption
                 _ConnectFlag_IC = True
             End If
 
-            If _ConnectFlag_CC And _ConnectFlag_ATMS And _ConnectFlag_IC Then
+            If _ConnectFlag_CC Or _ConnectFlag_ATMS Or _ConnectFlag_IC Then 'Jason201511_1 0F04 Report Status
                 newHardWareStatus = SetIPC_ConnectError(True)
             Else
                 newHardWareStatus = SetIPC_ConnectError(False)
@@ -227,9 +227,9 @@ Module Module_PacketageOption
         Try
             Dim tmpByte1 As Byte() = StrToByteArray2(FinialString)
             If setValue Then
-                tmpByte1(1) = tmpByte1(1) Or &H80
+                tmpByte1(1) = tmpByte1(1) Or &H4
             Else
-                tmpByte1(1) = tmpByte1(1) And &HFFF7
+                tmpByte1(1) = tmpByte1(1) And &HFFFB
             End If
             FinialString = ByteArrayToStr2(tmpByte1)
             Return FinialString
