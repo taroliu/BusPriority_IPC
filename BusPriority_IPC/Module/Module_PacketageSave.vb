@@ -272,11 +272,14 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                             Greenint = CurrentGreen(Data_5F15.Green(index))
                             Yellowrr = YellowplusRed(Data_5F14.LightStatus(index))
                             PhaseLength = Greenint + Yellowrr
+                            '_mainForm.Show_LBox_PolicyRightNowText(" Green " + Greenint.ToString + " Yellowrr " + Yellowrr.ToString)
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error in Calculating Phase Length " + ex.Message)
                         End Try
 
                         Dim wD As Long = DateDiff(DateInterval.Second, SaveData_5F03_TimeStamp, Now)
+                        '_mainForm.Show_LBox_PolicyRightNowText(" Interval " + wD.ToString)
+
                         Dim difference As Integer = wD - PhaseLength
                         '_mainForm.Show_LBox_PolicyRightNowText(SaveData_5F03_LastPhase.ToString + " 分相 : " + wD.ToString + " 秒  正常秒數 : " + PhaseLength.ToString + " 變化 " + difference.ToString)
 
