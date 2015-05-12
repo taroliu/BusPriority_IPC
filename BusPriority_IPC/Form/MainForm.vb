@@ -1038,7 +1038,12 @@ Public Class MainForm
                 Dim sendByte As Byte() = Incode_Step1(getSeqNum(), "0F42")
                 send_IC(sendByte)
             End If
-
+            '20150512 Auto Report 0F04 ,if IC Not Connect
+            'S-------------------------------------------------------------------
+            If Lab_ComStatus_IC.BackColor = Color.Red Then
+                SetHardWareStatusToIPC_ERROR()
+            End If
+            'E-------------------------------------------------------------------
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
             WriteLog(curPath, "MainForm", "  Timer_Clock_Tick Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
