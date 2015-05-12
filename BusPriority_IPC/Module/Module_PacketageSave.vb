@@ -63,7 +63,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                 Case "5FC8"     '目前時制計畫管理回報
                     'Return True
                     SaveData_5FC8(SaveString)
-                    _mainForm.Show_LBox_PolicyRightNowText("5FC8 Get")
+                    '_mainForm.Show_LBox_PolicyRightNowText("5FC8 Get")
                     Return True
                 Case "5F03"     '步階主動回報
                     SaveData_5F03(SaveString)

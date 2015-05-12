@@ -158,7 +158,7 @@ Module Module_Comm
                                         complete_5F48_AutoDownload = 1
 
                                         If Current_Planid Is Nothing Then
-                                            Current_Planid = Data_5F18.PlanID
+                                            Current_Planid = Data_5F18.PlanID                                            
                                             _mainForm.Show_LBox_PolicyRightNowText("New Planid")
                                             Changed_Planid = False
                                         ElseIf Current_Planid <> Data_5F18.PlanID Then

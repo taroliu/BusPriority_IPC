@@ -558,7 +558,7 @@ Public Class MainForm
                     _mainForm.Show_LBox_PolicyRightNowText("First 5f48 ")
                     setNowIC_Param_5F48()
                     Changed_Planid = False
-                ElseIf Current_Planid <> Data_5F18.PlanID Then
+                ElseIf Current_Planid <> Data_5F18.PlanID And Current_Planid <> Nothing Then
                     _mainForm.Show_LBox_PolicyRightNowText("download new 5f48 ")
                     setNowIC_Param_5F48()
                     Changed_Planid = True
@@ -1035,11 +1035,14 @@ Public Class MainForm
     'S---------------------------------------------------------------------------
     Private Sub Timer_Clock_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Clock.Tick
         Try
+            setNowIC_Param_5F48() 'ask the planid every minute
+
             If Now.ToString("mm") = "00" Then
                 'send_IC(StrToByteArray2("0F42"))
                 Dim sendByte As Byte() = Incode_Step1(getSeqNum(), "0F42")
                 send_IC(sendByte)
             End If
+
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
             WriteLog(curPath, "MainForm", "  Timer_Clock_Tick Catch:" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
