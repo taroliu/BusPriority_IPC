@@ -6,7 +6,7 @@ Module Module_PublicParam
     '--Version MustFill-請轉成Hex
     Public VersionYear As String = "68" '104 HEX
     Public VersionMonth As String = "05" 'HEX
-    Public VersionDay As String = "0D" 'HEX
+    Public VersionDay As String = "0C" 'HEX
     Public VersionID As String = "01"  '0.1  0.0~9.9
 
     '-- File Parameter
