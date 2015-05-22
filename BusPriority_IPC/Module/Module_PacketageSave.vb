@@ -245,8 +245,11 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
             If Changed_Planid = True Then
                 Original_Phase_Step.Clear()
+
+
                 _mainForm.Show_LBox_PolicyRightNowText("Original_Phase_Step Cleared")
                 RanFullCycle = False
+
             End If
 
             Try
@@ -277,6 +280,8 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                             _mainForm.Show_LBox_PolicyRightNowText("Error in Calculating Phase Length " + ex.Message)
                         End Try
 
+
+
                         Dim wD As Long = DateDiff(DateInterval.Second, SaveData_5F03_TimeStamp, Now)
                         '_mainForm.Show_LBox_PolicyRightNowText(" Interval " + wD.ToString)
 
@@ -284,27 +289,27 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         '_mainForm.Show_LBox_PolicyRightNowText(SaveData_5F03_LastPhase.ToString + " 分相 : " + wD.ToString + " 秒  正常秒數 : " + PhaseLength.ToString + " 變化 " + difference.ToString)
 
                         'SubPhase_Log(_mainForm.TBox_CrossRoadID.Text.ToString, SaveData_5F03_LastPhase.ToString, wD.ToString, SaveData_5F03_TimeStamp, PhaseLength, difference)
-                        If difference <> 0 Then
-                            SubPhase_Log(_mainForm.TBox_CrossRoadID.Text.ToString, SaveData_5F03_LastPhase.ToString, wD.ToString, SaveData_5F03_TimeStamp, PhaseLength, difference)
-                            _mainForm.Show_LBox_PolicyRightNowText("Message " + SaveData)
 
-                            If difference > 0 Then
-                                _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + SaveData_5F03_LastPhase.ToString + " 多跑了 " + difference.ToString + " 秒")
-                            Else
-                                _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + SaveData_5F03_LastPhase.ToString + " 少跑了 " + difference.ToString + " 秒")
-                            End If
+                        SubPhase_Log(_mainForm.TBox_CrossRoadID.Text.ToString, SaveData_5F03_LastPhase.ToString, wD.ToString, SaveData_5F03_TimeStamp, PhaseLength, difference)
+                        _mainForm.Show_LBox_PolicyRightNowText("Message " + SaveData)
 
-                            If Payback.Contains(SaveData_5F03_LastPhase) Then
-                                Dim tempstorage As Integer = Payback(SaveData_5F03_LastPhase)
-                                difference = difference + tempstorage
-                                Payback.Remove(SaveData_5F03_LastPhase)
-                                Payback.Add(SaveData_5F03_LastPhase, difference)
-                            Else
-                                Payback.Add(SaveData_5F03_LastPhase, difference)
-                            End If
-
-
+                        If difference > 0 Then
+                            _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + SaveData_5F03_LastPhase.ToString + " 多跑了 " + difference.ToString + " 秒")
+                        Else
+                            _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + SaveData_5F03_LastPhase.ToString + " 少跑了 " + difference.ToString + " 秒")
                         End If
+
+                        If Payback.Contains(SaveData_5F03_LastPhase) Then
+                            Dim tempstorage As Integer = Payback(SaveData_5F03_LastPhase)
+                            difference = difference + tempstorage
+                            Payback.Remove(SaveData_5F03_LastPhase)
+                            Payback.Add(SaveData_5F03_LastPhase, difference)
+                        Else
+                            Payback.Add(SaveData_5F03_LastPhase, difference)
+                        End If
+
+
+
 
                         Dim MyKeys As ICollection
                         MyKeys = Payback.Keys()
