@@ -127,6 +127,7 @@ Module Module_Comm
                     Loop
 
                     If SendString.Substring(0, 4) = "AABB" Then
+                        DiffTimeOfTC_Request = Now 'Jason20150527三分鐘未收到TC封包,回報IPC通訊異常
                         SaveDataFunction(SendString) 'Save Data Struct
                         If _ConnectFlag_CC Or _ConnectFlag_ATMS Then
                             Dim recHeadstr As String = SendString.Substring(14, 4)
@@ -158,7 +159,7 @@ Module Module_Comm
                                         complete_5F48_AutoDownload = 1
 
                                         If Current_Planid Is Nothing Then
-                                            Current_Planid = Data_5F18.PlanID                                            
+                                            Current_Planid = Data_5F18.PlanID
                                             _mainForm.Show_LBox_PolicyRightNowText("New Planid")
                                             Changed_Planid = False
                                         ElseIf Current_Planid <> Data_5F18.PlanID Then

@@ -124,6 +124,9 @@ Module Module_PublicParam
 
     Public isRunSystemFromCC        '總開關協定控制
     Public isRunSystemFromSeqment   '總開關協定控制
+
+    Public DiffTimeOfTC_Request As DateTime  'Jason20150527三分鐘未收到TC封包,回報IPC通訊異常
+
     Public Sub setWorkFolderPath()
         Dim nIndex As Integer
         curPath = Trim(System.Reflection.Assembly.GetExecutingAssembly().Location)

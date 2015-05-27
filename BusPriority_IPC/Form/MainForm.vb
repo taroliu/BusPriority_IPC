@@ -240,6 +240,7 @@ Public Class MainForm
             Timer_Connect_TCP.Enabled = True
 
             ToolStripStatusLabel1.Text = "系統啟動時間:" + Date.Now.ToString("yyyy/MM/dd HH:mm:ss ")
+            DiffTimeOfTC_Request = Now 'Jason20150527三分鐘未收到TC封包,回報IPC通訊異常
             RunOTAResponse() 'Jason 20150205 OTA Modify
             SetAutoLoad5F46() 'Jason20150205 自動查詢時段資料放進XML,供中心查詢.
             init_finish = True
@@ -1043,6 +1044,7 @@ Public Class MainForm
             If Lab_ComStatus_IC.BackColor = Color.Red Then
                 SetHardWareStatusToIPC_ERROR()
             End If
+
             'E-------------------------------------------------------------------
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
@@ -1134,5 +1136,17 @@ Public Class MainForm
     End Sub
     'E-------------------------------------------------------------------------------------
 
-  
+    'Jason20150527三分鐘未收到TC封包,回報IPC通訊異常
+    'S-------------------------------------------------------------------------------------
+    Private Sub Timer_Auto0F04_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Auto0F04.Tick
+
+        Dim iSpan As Double = (Now() - DiffTimeOfTC_Request).TotalSeconds
+
+        If iSpan > 180 Then
+            Dim newHardWareStatus As String = SetIPC_ConnectError(True)
+            Dim sendByte As Byte() = Incode_Step1(getSeqNum(), MarkAACommand("0F04" + newHardWareStatus))
+            Socket_WriteToCC(sendByte)
+        End If
+    End Sub
+    'E-------------------------------------------------------------------------------------
 End Class
