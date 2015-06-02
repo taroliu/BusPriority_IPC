@@ -234,14 +234,17 @@ Module Module_Policy_1
 
 
 
+                                If _mainForm.Label_BusPrimEnable.Text = "啟動" Then
+                                    _mainForm.Show_LBox_PolicyRightNowText("A2 啟動時相控制 ")
 
 
-
-                                Dim sendByte As Byte()
-                                Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
-                                tranStr = tranStr + TotalCycleMin
-                                sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
-                                _mainForm.send_IC(sendByte)
+                                    Dim sendByte As Byte()
+                                    Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
+                                    tranStr = tranStr + TotalCycleMin
+                                    sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
+                                    _mainForm.send_IC(sendByte)
+                                End If
+                               
 
 
                                 Try
