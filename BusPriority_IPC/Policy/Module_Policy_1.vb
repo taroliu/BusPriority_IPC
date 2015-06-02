@@ -296,7 +296,7 @@ Module Module_Policy_1
                                 'Dim FiveFB4Str As String = "5FB4" + FiveFB4("GroupID") + FiveFB4("CrossRoadID") + FiveFB4("BusID") + "0" + FiveFB4("BusLineID") + "0" + FiveFB4("GoBack") + FiveFB4("BusPhase") + "0" + FiveFB4("Bus2CrossRoad") + FiveFB4("Strategy") + FiveFB4("Currentphase") + FiveFB4("P12") + FiveFB4("P22") + FiveFB4("P32")
                                 '_mainForm.Show_LBox_PolicyRightNowText("5FB4 Str " + FiveFB4Str + " Length " + FiveFB4Str.Length.ToString)
                                 Try
-                                    BusStrategy_Log(_mainForm.TBox_GroupID.Text.ToString, _mainForm.TBox_CrossRoadID.Text.ToString, SaveString(2), SaveString(5), SaveString(6), FiveFB4("BusPhase"), FiveFB4("Bus2CrossRoad"), FiveFB4("Strategy"), FiveFB4("Currentphase"), FiveFB4("P1"), FiveFB4("P2"), FiveFB4("P3"))
+                                    BusStrategy_Log(_mainForm.TBox_GroupID.Text.ToString, _mainForm.TBox_CrossRoadID.Text.ToString, SaveString(2), SaveString(5), SaveString(6), FiveFB4("BusPhase"), FiveFB4("Bus2CrossRoad"), FiveFB4("Strategy"), FiveFB4("Currentphase"), FiveFB4("P1"), FiveFB4("P2"), FiveFB4("P3"), FiveFB4("Play1"), FiveFB4("Play2"))
                                 Catch ex As Exception
                                     _mainForm.Show_LBox_PolicyRightNowText("Error  BusStrategy_Log " + ex.Message)
                                 End Try
@@ -380,6 +380,8 @@ Module Module_Policy_1
 
                             Try
                                 FiveFB4.Add("Strategy", "55")
+                                FiveFB4.Add("Play2", "NoChange")
+
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 55 " + ex.Message)
                             End Try
@@ -612,6 +614,9 @@ Module Module_Policy_1
 
                 Dim RemanSecBusCrossRoad As Integer
 
+                Dim Pplay1 As String = ""
+                Dim Pplay2 As String = ""
+
 
                 For index As Integer = 0 To TotalPhaseInt - 1
 
@@ -658,7 +663,11 @@ Module Module_Policy_1
 
                     'Massgg(index) = MaxGreen(Data_5F14.LightStatus(index))
                     _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + index.ToString + "  綠燈 " + Greenint(index).ToString + " 最小綠 " + Microgg(index).ToString + "  黃燈+全紅 " + Yellowrr(index).ToString)
+                    Pplay1 = Pplay1 + Greenint(index).ToString + "," + Yellowrr(index).ToString + ";"
+
                 Next
+
+                FiveFB4.Add("Play1", Pplay1)
 
                 For index As Integer = 0 To TotalPhaseInt - 1
                     Dim TempMicro As Integer
@@ -759,6 +768,7 @@ Module Module_Policy_1
 
                         Try
                             FiveFB4.Add("Strategy", "11")
+                            FiveFB4.Add("Play2", "NoChange")
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 11 " + ex.Message)
                         End Try
@@ -771,9 +781,12 @@ Module Module_Policy_1
                             _mainForm.Show_LBox_PolicyRightNowText("<" + Data_A2.BusID + ">公車到路口剩餘秒數(" + RemanSecBusCrossRoad.ToString + ") 大於 公車時相剩餘綠燈 " + Cal_RG_i.ToString + " -->公車時相延長至最大綠[1-2]")
                             Command("5F1C" + Data_5FCC.Current_SubPhaseID + "01" + Massggstr(CurrentPhaseInt - 1))
                             _mainForm.Show_LBox_PolicyRightNowText(" 延長 " + CurrentPhaseInt.ToString + "分相 " + Longer(CurrentPhaseInt - 1).ToString + " 秒")
+                            Pplay2 = CurrentPhaseInt.ToString + "," + Longer(CurrentPhaseInt - 1).ToString + ";"
+
 
                             Try
                                 FiveFB4.Add("Strategy", "12")
+                                FiveFB4.Add("Play2", Pplay2)
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 12 " + ex.Message)
                             End Try
@@ -802,6 +815,7 @@ Module Module_Policy_1
                                     _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                    Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                                 Else
                                     Exit For
                                 End If
@@ -813,12 +827,18 @@ Module Module_Policy_1
                                     _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                    Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                                 Else
                                     Exit For
                                 End If
 
                             Next index
 
+                            Try
+                                FiveFB4.Add("Play2", Pplay2)
+                            Catch ex As Exception
+                                _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy Play2 " + ex.Message)
+                            End Try
 
                             'For index As Integer = CurrentPhaseInt + 1 To TotalPhaseInt
                             '    If BusPassPhases(index - 1) = False Then
@@ -922,6 +942,7 @@ Module Module_Policy_1
 
                         Try
                             FiveFB4.Add("Strategy", "21")
+                            FiveFB4.Add("Play2", "NoChange")
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 21 " + ex.Message)
                         End Try
@@ -941,6 +962,7 @@ Module Module_Policy_1
 
                             Command("5F1C" + Data_5FCC.Current_SubPhaseID + "01" + Microggstr(CurrentPhaseInt - 1))
                             _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + CurrentPhaseInt.ToString + "分相 " + Shorter(CurrentPhaseInt - 1).ToString + " 秒")
+                            Pplay2 = Pplay2 + CurrentPhaseInt.ToString + "-" + Shorter(CurrentPhaseInt - 1).ToString + ";"
                         Else
                             _mainForm.Show_LBox_PolicyRightNowText("非第一步階，不能縮短此分相 " + Data_5FCC.Current_SubPhaseID.ToString)
 
@@ -951,6 +973,7 @@ Module Module_Policy_1
                                 _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                             Else
                                 Exit For
                             End If
@@ -962,11 +985,19 @@ Module Module_Policy_1
                                 _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                             Else
                                 Exit For
                             End If
 
                         Next index
+
+                        Try
+
+                            FiveFB4.Add("Play2", Pplay2)
+                        Catch ex As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy Play2 2-2" + ex.Message)
+                        End Try
 
                         'For index As Integer = CurrentPhaseInt + 1 To TotalPhaseInt
                         '    If BusPassPhases(index - 1) = False Then
@@ -1254,6 +1285,9 @@ Module Module_Policy_1
 
                 Dim RemanSecBusCrossRoad As Integer
 
+                Dim Pplay1 As String = ""
+                Dim Pplay2 As String = ""
+
 
                 For index As Integer = 0 To TotalPhaseInt - 1
 
@@ -1300,7 +1334,11 @@ Module Module_Policy_1
 
                     'Massgg(index) = MaxGreen(Data_5F14.LightStatus(index))
                     _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + index.ToString + "  綠燈 " + Greenint(index).ToString + " 最小綠 " + Microgg(index).ToString + "  黃燈+全紅 " + Yellowrr(index).ToString)
+                    Pplay1 = Pplay1 + Greenint(index).ToString + "," + Yellowrr(index).ToString + ";"
+
                 Next
+
+                FiveFB4.Add("Play1", Pplay1)
 
                 For index As Integer = 0 To TotalPhaseInt - 1
                     Dim TempMicro As Integer
@@ -1401,6 +1439,7 @@ Module Module_Policy_1
 
                         Try
                             FiveFB4.Add("Strategy", "11")
+                            FiveFB4.Add("Play2", "NoChange")
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 11 " + ex.Message)
                         End Try
@@ -1413,9 +1452,12 @@ Module Module_Policy_1
                             _mainForm.Show_LBox_PolicyRightNowText("<" + Data_A2.BusID + ">公車到路口剩餘秒數(" + RemanSecBusCrossRoad.ToString + ") 大於 公車時相剩餘綠燈 " + Cal_RG_i.ToString + " -->公車時相延長至最大綠[1-2]")
                             Command("5F1C" + Data_5FCC.Current_SubPhaseID + "01" + Massggstr(CurrentPhaseInt - 1))
                             _mainForm.Show_LBox_PolicyRightNowText(" 延長 " + CurrentPhaseInt.ToString + "分相 " + Longer(CurrentPhaseInt - 1).ToString + " 秒")
+                            Pplay2 = CurrentPhaseInt.ToString + "," + Longer(CurrentPhaseInt - 1).ToString + ";"
+
 
                             Try
                                 FiveFB4.Add("Strategy", "12")
+                                FiveFB4.Add("Play2", Pplay2)
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 12 " + ex.Message)
                             End Try
@@ -1444,6 +1486,7 @@ Module Module_Policy_1
                                     _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                    Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                                 Else
                                     Exit For
                                 End If
@@ -1455,12 +1498,18 @@ Module Module_Policy_1
                                     _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                    Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                                 Else
                                     Exit For
                                 End If
 
                             Next index
 
+                            Try
+                                FiveFB4.Add("Play2", Pplay2)
+                            Catch ex As Exception
+                                _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy Play2 " + ex.Message)
+                            End Try
 
                             'For index As Integer = CurrentPhaseInt + 1 To TotalPhaseInt
                             '    If BusPassPhases(index - 1) = False Then
@@ -1564,6 +1613,7 @@ Module Module_Policy_1
 
                         Try
                             FiveFB4.Add("Strategy", "21")
+                            FiveFB4.Add("Play2", "NoChange")
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 21 " + ex.Message)
                         End Try
@@ -1583,6 +1633,7 @@ Module Module_Policy_1
 
                             Command("5F1C" + Data_5FCC.Current_SubPhaseID + "01" + Microggstr(CurrentPhaseInt - 1))
                             _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + CurrentPhaseInt.ToString + "分相 " + Shorter(CurrentPhaseInt - 1).ToString + " 秒")
+                            Pplay2 = Pplay2 + CurrentPhaseInt.ToString + "-" + Shorter(CurrentPhaseInt - 1).ToString + ";"
                         Else
                             _mainForm.Show_LBox_PolicyRightNowText("非第一步階，不能縮短此分相 " + Data_5FCC.Current_SubPhaseID.ToString)
 
@@ -1593,6 +1644,7 @@ Module Module_Policy_1
                                 _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                             Else
                                 Exit For
                             End If
@@ -1604,11 +1656,19 @@ Module Module_Policy_1
                                 _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
+                                Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
                             Else
                                 Exit For
                             End If
 
                         Next index
+
+                        Try
+
+                            FiveFB4.Add("Play2", Pplay2)
+                        Catch ex As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy Play2 2-2" + ex.Message)
+                        End Try
 
                         'For index As Integer = CurrentPhaseInt + 1 To TotalPhaseInt
                         '    If BusPassPhases(index - 1) = False Then

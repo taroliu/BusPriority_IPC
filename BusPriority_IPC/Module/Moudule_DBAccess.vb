@@ -54,6 +54,8 @@ Module Moudule_DBAccess
     Public Sub DB_CheckTable()
         Try
             connection.Open()
+            Dim sql_cmd As String
+            Dim cmd As SqlCommand
             'Create Table
             Try
                 Dim sql_create As String = "CREATE TABLE BusPriority_Update_Log " & _
@@ -93,6 +95,49 @@ Module Moudule_DBAccess
             Catch ex As Exception
                 WriteLog(curPath, "Moudule_DBAccess", "BusPriority_Update_Log_View is exit:" + ex.Message, _logEnable)
             End Try
+
+            'Try
+            '    sql_cmd = "ALTER TABLE BusStrategy_Log ADD Play1 nvarchar(50)"
+
+            '    cmd = New SqlCommand(sql_cmd, connection)
+            '    cmd.Connection.Open()
+            '    cmd.ExecuteNonQuery()
+            '    cmd.Connection.Close()
+            '    cmd.Dispose()
+            'Catch ex As Exception
+            '    WriteLog(curPath, "Moudule_DBAccess", "BusStrategy_Log,Add [Play1] is exit:" + ex.Message, _logEnable)
+            'Finally
+            '    If (cmd.Connection.State = ConnectionState.Open) Then
+            '        cmd.Connection.Close()
+            '    End If
+            'End Try
+
+
+            Try
+                Dim sql_create As String = "ALTER TABLE BusStrategy_Log ADD Play1 nvarchar(50)"
+
+                Dim adapter_ceate As New SqlDataAdapter(sql_create, connection)
+                adapter_ceate.UpdateCommand = connection.CreateCommand
+                adapter_ceate.UpdateCommand.CommandText = sql_create
+                adapter_ceate.UpdateCommand.ExecuteNonQuery()
+                adapter_ceate.Dispose()
+            Catch ex As Exception
+                WriteLog(curPath, "Moudule_DBAccess", "BusStrategy_Log is exit:" + ex.Message, _logEnable)
+            End Try
+
+            Try
+                Dim sql_create As String = "ALTER TABLE BusStrategy_Log ADD Play2 nvarchar(50)"
+
+                Dim adapter_ceate As New SqlDataAdapter(sql_create, connection)
+                adapter_ceate.UpdateCommand = connection.CreateCommand
+                adapter_ceate.UpdateCommand.CommandText = sql_create
+                adapter_ceate.UpdateCommand.ExecuteNonQuery()
+                adapter_ceate.Dispose()
+            Catch ex As Exception
+                WriteLog(curPath, "Moudule_DBAccess", "BusStrategy_Log is exit:" + ex.Message, _logEnable)
+            End Try
+
+
             connection.Close()
 
 
@@ -467,7 +512,7 @@ Module Moudule_DBAccess
             WriteLog(curPath, "Moudule_DBAccess", "NewTriggerPoint Catch:" + ex.Message, _logEnable)
         End Try
     End Sub
-    Public Sub BusStrategy_Log(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal BusPhase As String, ByVal Bus2CrossRoad As String, ByVal Strategy As String, ByVal Currentphase As String, ByVal P1 As String, ByVal P2 As String, ByVal P3 As String)
+    Public Sub BusStrategy_Log(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal BusPhase As String, ByVal Bus2CrossRoad As String, ByVal Strategy As String, ByVal Currentphase As String, ByVal P1 As String, ByVal P2 As String, ByVal P3 As String, ByVal Play1 As String, ByVal Play2 As String)
 
         Try
             Dim timedata As Boolean = True
@@ -476,7 +521,7 @@ Module Moudule_DBAccess
             '_mainForm.Show_LBox_PolicyRightNowText("PTime 2 " + Ptime(1))
             '_mainForm.Show_LBox_PolicyRightNowText("PTime 3 " + Ptime(2))
             Try
-               
+
                 For index As Integer = 0 To 2
                     Dim temptime As DateTime = Ptime(index)
                     Dim DiffYear As Integer = DateDiff(DateInterval.Hour, temptime, Now)
@@ -502,9 +547,9 @@ Module Moudule_DBAccess
                 _mainForm.Show_LBox_PolicyRightNowText("Missing Data")
 
             Else
-                Dim sql_insert As String = "INSERT BusStrategy_Log (GroupID,CrossRoadID,BusID,BusLineID,GoBack,BusPhase,Bus2CrossRoad,Strategy,Currentphase,P1,P2,P3) " +
+                Dim sql_insert As String = "INSERT BusStrategy_Log (GroupID,CrossRoadID,BusID,BusLineID,GoBack,BusPhase,Bus2CrossRoad,Strategy,Currentphase,P1,P2,P3,Play1,Play2) " +
                       "VALUES ('" + Trim(GroupID) + "','" + Trim(CrossRoadID) + "','" + Trim(BusID) + "','" + Trim(BusLineID) + "','" +
-                                    Trim(GoBack) + "','" + Trim(BusPhase) + "','" + Trim(Bus2CrossRoad) + "','" + Trim(Strategy) + "','" + Trim(Currentphase) + "','" + Trim(P1) + "','" + Trim(P2) + "','" + Trim(P3) + "')"
+                                    Trim(GoBack) + "','" + Trim(BusPhase) + "','" + Trim(Bus2CrossRoad) + "','" + Trim(Strategy) + "','" + Trim(Currentphase) + "','" + Trim(P1) + "','" + Trim(P2) + "','" + Trim(P3) + "','" + Trim(Play1) + "','" + Trim(Play2) + "')"
                 'Dim connection As New SqlConnection(connectionString)
 
                 Dim adapter_insert As New SqlDataAdapter(sql_insert, connection)
