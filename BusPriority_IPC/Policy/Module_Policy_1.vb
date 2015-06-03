@@ -818,7 +818,7 @@ Module Module_Policy_1
                                     _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
-                                    Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
+                                    Pplay2 = Pplay2 + index.ToString + ",-" + Shorter(index - 1).ToString + ";"
                                 Else
                                     Exit For
                                 End If
@@ -830,7 +830,7 @@ Module Module_Policy_1
                                     _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                     _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
-                                    Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
+                                    Pplay2 = Pplay2 + index.ToString + ",-" + Shorter(index - 1).ToString + ";"
                                 Else
                                     Exit For
                                 End If
@@ -965,7 +965,7 @@ Module Module_Policy_1
 
                             Command("5F1C" + Data_5FCC.Current_SubPhaseID + "01" + Microggstr(CurrentPhaseInt - 1))
                             _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + CurrentPhaseInt.ToString + "分相 " + Shorter(CurrentPhaseInt - 1).ToString + " 秒")
-                            Pplay2 = Pplay2 + CurrentPhaseInt.ToString + "-" + Shorter(CurrentPhaseInt - 1).ToString + ";"
+                            Pplay2 = Pplay2 + CurrentPhaseInt.ToString + ",-" + Shorter(CurrentPhaseInt - 1).ToString + ";"
                         Else
                             _mainForm.Show_LBox_PolicyRightNowText("非第一步階，不能縮短此分相 " + Data_5FCC.Current_SubPhaseID.ToString)
 
@@ -976,7 +976,7 @@ Module Module_Policy_1
                                 _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
-                                Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
+                                Pplay2 = Pplay2 + index.ToString + ",-" + Shorter(index - 1).ToString + ";"
                             Else
                                 Exit For
                             End If
@@ -988,7 +988,7 @@ Module Module_Policy_1
                                 _mainForm.Show_LBox_PolicyRightNowText("Save Command " + "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 Phase_Commands.Add(IntToHexString(index, 2), "5F1C" + IntToHexString(index, 2) + "01" + IntToHexString(Microgg(index - 1), 2))
                                 _mainForm.Show_LBox_PolicyRightNowText(" 縮短 " + index.ToString + "分相 " + Shorter(index - 1).ToString + " 秒")
-                                Pplay2 = Pplay2 + index.ToString + "-" + Shorter(index - 1).ToString + ";"
+                                Pplay2 = Pplay2 + index.ToString + ",-" + Shorter(index - 1).ToString + ";"
                             Else
                                 Exit For
                             End If
