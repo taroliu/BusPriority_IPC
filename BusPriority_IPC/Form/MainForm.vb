@@ -515,7 +515,29 @@ Public Class MainForm
         'If Testtime2 > Testtime Then
         '    _mainForm.Show_LBox_PolicyRightNowText("Testtime2 is the Latest")
         'End If
-        SetIPC_ConnectError(False)
+        'SetIPC_ConnectError(False)
+        Dim nowdate As DateTime = Now
+
+        Dim span As TimeSpan = New TimeSpan(0, 0, 0, 30, 0)
+
+        Dim pastdate As DateTime = nowdate.Subtract(span)
+
+        Dim edate As DateTime
+        Dim emptydate As String = "1900-01-01 00:00:00"
+        _mainForm.Show_LBox_PolicyRightNowText("Now Time is " + nowdate.ToString + " PastDate " + pastdate.ToString)
+
+        'If edate = emptydate Then
+        '    _mainForm.Show_LBox_PolicyRightNowText(" equal to empty date")
+        'Else
+
+        '    _mainForm.Show_LBox_PolicyRightNowText(" Not equal to empty date " + edate.ToString)
+        'End If
+
+        For counter As Integer = 2 To 0 Step -1
+            _mainForm.Show_LBox_PolicyRightNowText(counter.ToString)
+        Next
+
+
     End Sub
 
     Private Sub Timer_Connect_TCP_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Connect_TCP.Tick

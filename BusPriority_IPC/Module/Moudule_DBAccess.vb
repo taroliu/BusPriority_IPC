@@ -517,6 +517,10 @@ Module Moudule_DBAccess
         Try
             Dim timedata As Boolean = True
             Dim Ptime = {P1, P2, P3}
+            'Now.ToString("yyyy/MM/dd HH:mm:ss.ffff")
+
+            Dim emptydate As String = "1900-01-01 00:00:00"
+
             '_mainForm.Show_LBox_PolicyRightNowText("PTime 1 " + Ptime(0))
             '_mainForm.Show_LBox_PolicyRightNowText("PTime 2 " + Ptime(1))
             '_mainForm.Show_LBox_PolicyRightNowText("PTime 3 " + Ptime(2))
@@ -524,11 +528,19 @@ Module Moudule_DBAccess
 
                 For index As Integer = 0 To 2
                     Dim temptime As DateTime = Ptime(index)
+                    _mainForm.Show_LBox_PolicyRightNowText(" TempTime " + temptime.ToString)
                     Dim DiffYear As Integer = DateDiff(DateInterval.Hour, temptime, Now)
                     If DiffYear > 1 Then
                         timedata = False
                     End If
                 Next index
+
+                'If Ptime(0) = emptydate And P2 <> emptydate Then
+
+                'Else
+
+                'End If
+
 
                 If Ptime(0) > Ptime(1) Or Ptime(1) > Ptime(2) Or Ptime(0) > Ptime(2) Then
                     timedata = False
