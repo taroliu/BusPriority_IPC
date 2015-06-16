@@ -533,9 +533,9 @@ Public Class MainForm
         '    _mainForm.Show_LBox_PolicyRightNowText(" Not equal to empty date " + edate.ToString)
         'End If
 
-        For counter As Integer = 2 To 0 Step -1
-            _mainForm.Show_LBox_PolicyRightNowText(counter.ToString)
-        Next
+        'For counter As Integer = 2 To 0 Step -1
+        '    _mainForm.Show_LBox_PolicyRightNowText(counter.ToString)
+        'Next
 
 
     End Sub

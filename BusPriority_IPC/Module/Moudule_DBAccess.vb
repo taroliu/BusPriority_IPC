@@ -512,6 +512,56 @@ Module Moudule_DBAccess
             WriteLog(curPath, "Moudule_DBAccess", "NewTriggerPoint Catch:" + ex.Message, _logEnable)
         End Try
     End Sub
+    Public Sub BusStrategy_Log2(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal BusPhase As String, ByVal Bus2CrossRoad As String, ByVal Strategy As String, ByVal Currentphase As String, ByVal P1 As String, ByVal P2 As String, ByVal P3 As String, ByVal Play1 As String, ByVal Play2 As String)
+
+        Try
+            Try
+                Dim Time_chk = {False, False, False}
+                Dim Ptime = {P1, P2, P3}
+                Dim Pdatetime() As DateTime
+
+                For index As Integer = 0 To 2
+                    Dim temptime As DateTime = Ptime(index)
+                    _mainForm.Show_LBox_PolicyRightNowText(" TempTime " + temptime.ToString)
+                    Dim DiffYear As Integer = DateDiff(DateInterval.Hour, temptime, Now)
+
+                    If DiffYear > 1 Then
+
+                        Time_chk(index) = False
+                    Else
+                        Time_chk(index) = True
+                    End If
+                Next
+
+                If Time_chk(0) = True And Time_chk(1) = False And Time_chk(2) = True Then
+                    Dim DiffSec As Integer = DateDiff(DateInterval.Second, Time_chk(0), Now)
+                End If
+
+
+            Catch ex As Exception
+                _mainForm.Show_LBox_PolicyRightNowText(" BusStrategy_Log2 first step error ")
+            End Try
+
+
+            Dim sql_insert As String = "INSERT BusStrategy_Log (GroupID,CrossRoadID,BusID,BusLineID,GoBack,BusPhase,Bus2CrossRoad,Strategy,Currentphase,P1,P2,P3,Play1,Play2) " +
+                  "VALUES ('" + Trim(GroupID) + "','" + Trim(CrossRoadID) + "','" + Trim(BusID) + "','" + Trim(BusLineID) + "','" +
+                                Trim(GoBack) + "','" + Trim(BusPhase) + "','" + Trim(Bus2CrossRoad) + "','" + Trim(Strategy) + "','" + Trim(Currentphase) + "','" + Trim(P1) + "','" + Trim(P2) + "','" + Trim(P3) + "','" + Trim(Play1) + "','" + Trim(Play2) + "')"
+            'Dim connection As New SqlConnection(connectionString)
+
+            Dim adapter_insert As New SqlDataAdapter(sql_insert, connection)
+            connection.Open()
+            adapter_insert.UpdateCommand = connection.CreateCommand
+            adapter_insert.UpdateCommand.CommandText = sql_insert
+            adapter_insert.UpdateCommand.ExecuteNonQuery()
+            connection.Close()
+            adapter_insert.Dispose()
+
+
+        Catch ex As Exception
+            WriteLog(curPath, "Moudule_DBAccess", "BusStrategy_Log2 Catch:" + ex.Message, _logEnable)
+        End Try
+    End Sub
+
     Public Sub BusStrategy_Log(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal BusPhase As String, ByVal Bus2CrossRoad As String, ByVal Strategy As String, ByVal Currentphase As String, ByVal P1 As String, ByVal P2 As String, ByVal P3 As String, ByVal Play1 As String, ByVal Play2 As String)
 
         Try
@@ -526,20 +576,27 @@ Module Moudule_DBAccess
             '_mainForm.Show_LBox_PolicyRightNowText("PTime 3 " + Ptime(2))
             Try
 
-                For index As Integer = 0 To 2
+                For index As Integer = 2 To 0 Step -1
                     Dim temptime As DateTime = Ptime(index)
                     _mainForm.Show_LBox_PolicyRightNowText(" TempTime " + temptime.ToString)
                     Dim DiffYear As Integer = DateDiff(DateInterval.Hour, temptime, Now)
-                    If DiffYear > 1 Then
-                        timedata = False
+
+                    Dim nowdate As DateTime = Now
+
+                    Dim span30 As TimeSpan = New TimeSpan(0, 0, 0, 30, 0)
+
+                    Dim pastdate As DateTime = nowdate.Subtract(span30)
+
+
+                    If DiffYear > 1 And index = 2 Then
+                        'timedata = False
+                        Ptime(index) = Now.ToString("yyyy-MM-dd HH:mm:ss")
+
+                    ElseIf DiffYear > 1 And index = 1 Then
+
+
                     End If
-                Next index
-
-                'If Ptime(0) = emptydate And P2 <> emptydate Then
-
-                'Else
-
-                'End If
+                Next
 
 
                 If Ptime(0) > Ptime(1) Or Ptime(1) > Ptime(2) Or Ptime(0) > Ptime(2) Then
@@ -574,7 +631,7 @@ Module Moudule_DBAccess
 
             End If
         Catch ex As Exception
-            WriteLog(curPath, "Moudule_DBAccess", "NewTriggerPoint Catch:" + ex.Message, _logEnable)
+            WriteLog(curPath, "Moudule_DBAccess", "BusStrategy_Log Catch:" + ex.Message, _logEnable)
         End Try
     End Sub
     Public Sub BusA1_Log(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal Speed As String, ByVal GPS As String)

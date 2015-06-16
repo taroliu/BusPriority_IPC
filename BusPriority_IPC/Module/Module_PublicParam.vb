@@ -43,7 +43,7 @@ Module Module_PublicParam
     Public Changed_Planid As Boolean = False
 
     Public TotalCycleSec As Integer = 0
-    Public TotalCycleMin As String
+    Public TotalCycleMin As String = ""
 
     Public TotalPhase As String
     Public TotalPhaseInt As Integer

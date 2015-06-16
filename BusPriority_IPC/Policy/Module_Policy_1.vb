@@ -38,7 +38,15 @@ Module Module_Policy_1
                     If A1_Counter = 0 And _mainForm.Label_BusPrimEnable.Text = "啟動" Then
                         Dim sendByte As Byte()
                         Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
+
+                        If TotalCycleMin = "" Then
+                            TotalCycleMin = "05"
+                        End If
+
                         tranStr = tranStr + TotalCycleMin
+
+                        
+
                         sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
                         _mainForm.send_IC(sendByte)
                         A1_Counter = 1
@@ -192,7 +200,14 @@ Module Module_Policy_1
                         If A1_Counter = 0 And _mainForm.Label_BusPrimEnable.Text = "啟動" Then
                             Dim sendByte As Byte()
                             Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
+
+                            If TotalCycleMin = "" Then
+                                TotalCycleMin = "05"
+                            End If
+
                             tranStr = tranStr + TotalCycleMin
+
+
                             sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
                             _mainForm.send_IC(sendByte)
                             A1_Counter = 1
@@ -240,6 +255,11 @@ Module Module_Policy_1
 
                                     Dim sendByte As Byte()
                                     Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
+
+                                    If TotalCycleMin = "" Then
+                                        TotalCycleMin = "05"
+                                    End If
+
                                     tranStr = tranStr + TotalCycleMin
                                     sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
                                     _mainForm.send_IC(sendByte)
@@ -299,7 +319,7 @@ Module Module_Policy_1
                                 'Dim FiveFB4Str As String = "5FB4" + FiveFB4("GroupID") + FiveFB4("CrossRoadID") + FiveFB4("BusID") + "0" + FiveFB4("BusLineID") + "0" + FiveFB4("GoBack") + FiveFB4("BusPhase") + "0" + FiveFB4("Bus2CrossRoad") + FiveFB4("Strategy") + FiveFB4("Currentphase") + FiveFB4("P12") + FiveFB4("P22") + FiveFB4("P32")
                                 '_mainForm.Show_LBox_PolicyRightNowText("5FB4 Str " + FiveFB4Str + " Length " + FiveFB4Str.Length.ToString)
                                 Try
-                                    BusStrategy_Log(_mainForm.TBox_GroupID.Text.ToString, _mainForm.TBox_CrossRoadID.Text.ToString, SaveString(2), SaveString(5), SaveString(6), FiveFB4("BusPhase"), FiveFB4("Bus2CrossRoad"), FiveFB4("Strategy"), FiveFB4("Currentphase"), FiveFB4("P1"), FiveFB4("P2"), FiveFB4("P3"), FiveFB4("Play1"), FiveFB4("Play2"))
+                                    BusStrategy_Log2(_mainForm.TBox_GroupID.Text.ToString, _mainForm.TBox_CrossRoadID.Text.ToString, SaveString(2), SaveString(5), SaveString(6), FiveFB4("BusPhase"), FiveFB4("Bus2CrossRoad"), FiveFB4("Strategy"), FiveFB4("Currentphase"), FiveFB4("P1"), FiveFB4("P2"), FiveFB4("P3"), FiveFB4("Play1"), FiveFB4("Play2"))
                                 Catch ex As Exception
                                     _mainForm.Show_LBox_PolicyRightNowText("Error  BusStrategy_Log " + ex.Message)
                                 End Try
