@@ -1054,6 +1054,12 @@ Public Class MainForm
     'S---------------------------------------------------------------------------
     Private Sub Timer_Clock_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Clock.Tick
         Try
+            '每天早上二點自動關閉,重啟AP
+            'S------------------------------------------------------------------
+            If Now.Hour = 2 And Now.Minute = 0 Then
+                Me.Close()
+            End If
+            'E------------------------------------------------------------------
             setNowIC_Param_5F48() 'ask the planid every minute
 
             If Now.ToString("mm") = "00" Then
