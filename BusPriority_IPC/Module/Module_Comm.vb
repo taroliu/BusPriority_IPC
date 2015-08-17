@@ -763,9 +763,27 @@ Module Module_Comm
                     'E-------------------------------------------------------------------------
                     Thread.Sleep(200)
                     Dim recFromCarData As String = Encoding.ASCII.GetString(myReceiveBytes, 0, myReceiveBytes.Length)
-                    SaveDataFunction_Car(recFromCarData.Split(","))
+
+                    '車機封包串接問題處理 Jason 20150817
+                    'S-----------------------------------------------------------------------------------------------
+                    'OLD
+                    'SaveDataFunction_Car(recFromCarData.Split(","))
+                    '_mainForm.Show_LBox_ReceivedText_CAR("[R<--Bus] " + recFromCarData)
+                    'NEW
+                    AcceptCarOption(recFromCarData)
+                    Do
+                        Dim getPacket As String = getComplishPacketFromCar()
+                        If getPacket <> "" Then
+                            SaveDataFunction_Car(recFromCarData.Split(","))
+                            _mainForm.Show_LBox_ReceivedText_CAR("[R<--Bus] " + recFromCarData)
+                        Else
+                            Exit Do
+                        End If
+                    Loop
+                    'E-----------------------------------------------------------------------------------------------
+
                     '_mainForm.Show_LBox_PolicyRightNowText("CarComm " + recFromCarData.ToString)
-                    _mainForm.Show_LBox_ReceivedText_CAR("[R<--Bus] " + recFromCarData)
+
                 Loop
 
             End If

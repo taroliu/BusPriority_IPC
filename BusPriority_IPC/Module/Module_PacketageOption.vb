@@ -1,6 +1,100 @@
 ﻿Imports System.Threading
 
 Module Module_PacketageOption
+    '車機封包串接問題處理 Jason 20150817
+    'S--------------------------------------------------------------------------------------------
+    Public _poolCarPackOption As Semaphore
+    Public AcceptPoolFromCar As String = ""
+    Public Sub AcceptCarOption(ByVal CarData As String)
+        Try
+            _poolCarPackOption.WaitOne()
+            AcceptPoolFromCar = AcceptPoolFromCar + CarData
+            '先把格式轉成台南格式再處理
+            Dim Ary_data As String() = AcceptPoolFromCar.Split(",")
+            For i As Integer = 1 To Ary_data.Length - 1
+                Dim tmpIndex As Integer = -1
+                If Ary_data(i).IndexOf("A1") <> -1 Then
+                    tmpIndex = Ary_data(i).IndexOf("A1")
+                ElseIf Ary_data(i).IndexOf("A2") <> -1 Then
+                    tmpIndex = Ary_data(i).IndexOf("A2")
+                End If
+                If tmpIndex <> -1 Then
+                    Ary_data(i) = Ary_data(i).Substring(0, tmpIndex) + "/r/n" + Ary_data(i).Substring(tmpIndex, Ary_data(i).Length - tmpIndex)
+                End If
+            Next i
+            Dim newString As String = ""
+            For i As Integer = 0 To Ary_data.Length - 1
+                newString = newString + "," + Trim(Ary_data(i))
+            Next i
+            AcceptPoolFromCar = newString.Substring(1, newString.Length - 1)
+            _poolCarPackOption.Release()
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "Module_PacketageOption", "AcceptCarString Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+
+        End Try
+    End Sub
+
+    Public Function getComplishPacketFromCar() As String
+        Dim BackString As String = ""
+        Try
+
+
+            Dim start_A1_index As Integer = IIf(AcceptPoolFromCar.IndexOf("A1") = -1, 999, AcceptPoolFromCar.IndexOf("A1"))
+            Dim start_A2_index As Integer = IIf(AcceptPoolFromCar.IndexOf("A2") = -1, 999, AcceptPoolFromCar.IndexOf("A2"))
+            Dim start_index As Integer = 0
+            '決定A1,A2
+            Dim A_Type As String  '0-A1,1-A2
+            If start_A1_index = 999 And start_A2_index = 999 Then
+                Return ""
+            End If
+            If start_A1_index < start_A2_index Then  'A1-(A2)
+                A_Type = 0
+                start_index = start_A1_index
+            Else  'A2-(A1)
+                A_Type = 1
+                start_index = start_A2_index
+            End If
+            '清掉A1,A2前面亂碼
+            If start_index <> 0 Then
+                AcceptPoolFromCar = AcceptPoolFromCar.Substring(start_index, AcceptPoolFromCar.Length - start_index)
+            End If
+
+            '是否有完滿封包
+           
+
+            Dim end_index As Integer = AcceptPoolFromCar.IndexOf("/r/n")
+            If end_index >= 0 Then
+                BackString = AcceptPoolFromCar.Substring(0, end_index)
+                AcceptPoolFromCar = AcceptPoolFromCar.Substring(end_index + 4, AcceptPoolFromCar.Length - (end_index + 4))
+                Return BackString
+            Else
+                '如果沒有來/r/n要把前面不完整封包去掉
+                Dim tmpStringafter As String = AcceptPoolFromCar.Substring(2, AcceptPoolFromCar.Length - 2)
+                Dim tmpA1_index As Integer = IIf(tmpStringafter.IndexOf("A1") = -1, 999, tmpStringafter.IndexOf("A1"))
+                Dim tmpA2_index As Integer = IIf(tmpStringafter.IndexOf("A2") = -1, 999, tmpStringafter.IndexOf("A2"))
+                If tmpA1_index = 999 And tmpA2_index = 999 Then
+                    Return ""
+                Else
+                    If tmpA1_index < tmpA2_index Then
+                        AcceptPoolFromCar = AcceptPoolFromCar.Substring(tmpA1_index + 2, AcceptPoolFromCar.Length - (tmpA1_index + 2))
+                    Else
+                        AcceptPoolFromCar = AcceptPoolFromCar.Substring(tmpA2_index + 2, AcceptPoolFromCar.Length - (tmpA2_index + 2))
+                    End If
+                End If
+
+                Return ""
+            End If
+
+
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "Module_PacketageOption", "getComplishPacketFromCar Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+            Return "-1"
+        End Try
+    End Function
+    'E--------------------------------------------------------------------------------------------
+
     '接收設備封包,皆放至ArrayPool,進行檢查,是否串接,是否分段,再產出
     'S------------------------------------------------------------------------------------------------
     Public AcceptPoolArray(1024) As Byte
