@@ -628,57 +628,116 @@ Public Class MainForm
 
             End If
 
-            If BusComm_TimeStamp = Nothing Then
+            'If BusComm_TimeStamp = Nothing Then
 
-                '_mainForm.Show_LBox_PolicyRightNowText("No Bus Communication Yet")
-            Else
+            '    '_mainForm.Show_LBox_PolicyRightNowText("No Bus Communication Yet")
+            'Else
 
-                Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_TimeStamp, Now)
+            '    Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_TimeStamp, Now)
 
-                If DiffSecond > 10 Then
-                    '_mainForm.Show_LBox_PolicyRightNowText("Lost Communication with Bus ")
+            '    If DiffSecond > 10 Then
+            '        '_mainForm.Show_LBox_PolicyRightNowText("Lost Communication with Bus ")
 
-                    BusPrime_activate = False
-                    Phase_Commands.Clear()
-                    FiveFB4.Clear()
-                    A1_Counter = 0
-                    nowPlayBusID = "-1"
-                    SlowBusID.Clear()
-                    ActivatedBusID.Clear()
-                    BusComm_CommunicationStamp.Clear()
+            '        If FiveFB4.Count > 0 Then
 
-                Else
-                    '_mainForm.Show_LBox_PolicyRightNowText("Communicating with Bus ")
+            '            Try
+            '                _mainForm.Show_LBox_PolicyRightNowText("BackUP 離開點 關閉時相控制")
+            '                BusPrime_activate = False
+            '                Dim sendByte As Byte()
+            '                Dim tranStr As String = "5F100400"   '5F10  路口手動 + 時相控制
+            '                sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
+            '                _mainForm.send_IC(sendByte)
+            '                '_mainForm.Show_LBox_PolicyRightNowText("離開點 啟動補償機制")
+            '                A1_Counter = 0
+            '                ActivatedBusID.Remove(FiveFB4("BusID"))
+            '                Try
+            '                    'FiveFB4.Add("P32", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+            '                    FiveFB4.Add("P3", Now.ToString("yyyy-MM-dd HH:mm:ss"))
+            '                Catch ex As Exception
+            '                    _mainForm.Show_LBox_PolicyRightNowText(" Error FiveFB4 P32 P3 " + ex.Message)
+            '                End Try
+            '                _mainForm.Show_LBox_PolicyRightNowText("GroupID " + FiveFB4("GroupID"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("CrossRoadID " + FiveFB4("CrossRoadID"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("BusID " + FiveFB4("BusID"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("BusLineID " + FiveFB4("BusLineID"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("GoBack " + FiveFB4("GoBack"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("BusPhase " + FiveFB4("BusPhase"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("Bus2CrossRoad " + FiveFB4("Bus2CrossRoad"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("Strategy " + FiveFB4("Strategy"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("Currentphase " + FiveFB4("Currentphase"))
 
-                End If
+            '                _mainForm.Show_LBox_PolicyRightNowText("P1  time " + FiveFB4("P1"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("P2  time " + FiveFB4("P2"))
+            '                _mainForm.Show_LBox_PolicyRightNowText("P3  time " + FiveFB4("P3"))
+
+            '                'Dim FiveFB4Str As String = "5FB4" + FiveFB4("GroupID") + FiveFB4("CrossRoadID") + FiveFB4("BusID") + "0" + FiveFB4("BusLineID") + "0" + FiveFB4("GoBack") + FiveFB4("BusPhase") + "0" + FiveFB4("Bus2CrossRoad") + FiveFB4("Strategy") + FiveFB4("Currentphase") + FiveFB4("P12") + FiveFB4("P22") + FiveFB4("P32")
+            '                '_mainForm.Show_LBox_PolicyRightNowText("5FB4 Str " + FiveFB4Str + " Length " + FiveFB4Str.Length.ToString)
+            '                'BusStrategy_Log2(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal BusPhase As String, ByVal Bus2CrossRoad As String, ByVal Strategy As String, ByVal Currentphase As String, ByVal P1 As String, ByVal P2 As String, ByVal P3 As String, ByVal Play1 As String, ByVal Play2 As String)
+            '                Try
+            '                    BusStrategy_Log2(_mainForm.TBox_GroupID.Text.ToString, _mainForm.TBox_CrossRoadID.Text.ToString, FiveFB4("BusID"), FiveFB4("BusLineID"), FiveFB4("GoBack"), FiveFB4("BusPhase"), FiveFB4("Bus2CrossRoad"), FiveFB4("Strategy"), FiveFB4("Currentphase"), FiveFB4("P1"), FiveFB4("P2"), FiveFB4("P3"), FiveFB4("Play1"), FiveFB4("Play2"))
+            '                Catch ex As Exception
+            '                    _mainForm.Show_LBox_PolicyRightNowText("Error  BusStrategy_Log " + ex.Message)
+            '                End Try
+
+            '                'Dim FiveFB4byte As Byte() = Incode_Step1(getSeqNum(), MarkAACommand(FiveFB4Str))
+            '                'Dim tempstr As String = ByteArrayToStr2(FiveFB4byte)
+            '                '_mainForm.Show_LBox_PolicyRightNowText("5FB4 message " + tempstr)
+
+            '                FiveFB4.Clear()
+            '                'BusComm_CommunicationStamp.Clear()
+            '                BusComm_CommunicationStamp.Remove(nowPlayBusID)
+            '                nowPlayBusID = "-1"
+            '                _mainForm.Show_LBox_PolicyRightNowText("*****************************************************************************************************************************************")
+
+            '            Catch pp As Exception
+            '                _mainForm.Show_LBox_PolicyRightNowText("$$$$$$$$$$$ Error in BackupP3 " + pp.Message)
+            '            End Try
+
+            '        End If
 
 
 
-            End If
+            '        BusPrime_activate = False
+            '        Phase_Commands.Clear()
+            '        FiveFB4.Clear()
+            '        A1_Counter = 0
+            '        nowPlayBusID = "-1"
+            '        SlowBusID.Clear()
+            '        ActivatedBusID.Clear()
+            '        BusComm_CommunicationStamp.Clear()
+
+            '    Else
+            '        '_mainForm.Show_LBox_PolicyRightNowText("Communicating with Bus ")
+
+            '    End If
 
 
 
-            Try
-                If nowPlayBusID <> "-1" Then
+            'End If
 
-                    Dim BusComm_LastTime As DateTime = BusComm_CommunicationStamp(nowPlayBusID)
 
-                    Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_LastTime, Now)
 
-                    If DiffSecond > 300 Then
+            'Try
+            '    If nowPlayBusID <> "-1" Then
 
-                        nowPlayBusID = "-1"
-                        A1_Counter = 0
-                        'BusComm_CommunicationStamp.Clear()
-                        BusComm_CommunicationStamp.Remove(nowPlayBusID)
+            '        Dim BusComm_LastTime As DateTime = BusComm_CommunicationStamp(nowPlayBusID)
 
-                    End If
+            '        Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_LastTime, Now)
 
-                End If
+            '        If DiffSecond > 300 Then
 
-            Catch ex As Exception
-                _mainForm.Show_LBox_PolicyRightNowText("ErrorBusComm_CommunicationStamp" + ex.Message)
-            End Try
+            '            nowPlayBusID = "-1"
+            '            A1_Counter = 0
+            '            'BusComm_CommunicationStamp.Clear()
+            '            BusComm_CommunicationStamp.Remove(nowPlayBusID)
+
+            '        End If
+
+            '    End If
+
+            'Catch ex As Exception
+            '    _mainForm.Show_LBox_PolicyRightNowText("ErrorBusComm_CommunicationStamp" + ex.Message)
+            'End Try
 
 
 
@@ -1177,4 +1236,126 @@ Public Class MainForm
         End If
     End Sub
     'E-------------------------------------------------------------------------------------
+
+    Private Sub BusComm_Tick(sender As System.Object, e As System.EventArgs) Handles BusComm.Tick
+        '_mainForm.Show_LBox_PolicyRightNowText("BusComm_Tick Ticking ")
+        Try
+
+            If BusComm_TimeStamp = Nothing Then
+
+                '_mainForm.Show_LBox_PolicyRightNowText("No Bus Communication Yet")
+            Else
+
+                Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_TimeStamp, Now)
+
+                If DiffSecond > 10 Then
+                    '_mainForm.Show_LBox_PolicyRightNowText("Lost Communication with Bus ")
+
+                    If FiveFB4.Count > 0 Then
+
+                        Try
+                            _mainForm.Show_LBox_PolicyRightNowText("BackUP 離開點 關閉時相控制")
+                            BusPrime_activate = False
+                            Dim sendByte As Byte()
+                            Dim tranStr As String = "5F100400"   '5F10  路口手動 + 時相控制
+                            sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
+                            _mainForm.send_IC(sendByte)
+                            '_mainForm.Show_LBox_PolicyRightNowText("離開點 啟動補償機制")
+                            A1_Counter = 0
+                            ActivatedBusID.Remove(FiveFB4("BusID"))
+                            Try
+                                'FiveFB4.Add("P32", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
+                                FiveFB4.Add("P3", Now.ToString("yyyy-MM-dd HH:mm:ss"))
+                            Catch ex As Exception
+                                _mainForm.Show_LBox_PolicyRightNowText(" Error FiveFB4 P32 P3 " + ex.Message)
+                            End Try
+                            _mainForm.Show_LBox_PolicyRightNowText("GroupID " + FiveFB4("GroupID"))
+                            _mainForm.Show_LBox_PolicyRightNowText("CrossRoadID " + FiveFB4("CrossRoadID"))
+                            _mainForm.Show_LBox_PolicyRightNowText("BusID " + FiveFB4("BusID"))
+                            _mainForm.Show_LBox_PolicyRightNowText("BusLineID " + FiveFB4("BusLineID"))
+                            _mainForm.Show_LBox_PolicyRightNowText("GoBack " + FiveFB4("GoBack"))
+                            _mainForm.Show_LBox_PolicyRightNowText("BusPhase " + FiveFB4("BusPhase"))
+                            _mainForm.Show_LBox_PolicyRightNowText("Bus2CrossRoad " + FiveFB4("Bus2CrossRoad"))
+                            _mainForm.Show_LBox_PolicyRightNowText("Strategy " + FiveFB4("Strategy"))
+                            _mainForm.Show_LBox_PolicyRightNowText("Currentphase " + FiveFB4("Currentphase"))
+
+                            _mainForm.Show_LBox_PolicyRightNowText("P1  time " + FiveFB4("P1"))
+                            _mainForm.Show_LBox_PolicyRightNowText("P2  time " + FiveFB4("P2"))
+                            _mainForm.Show_LBox_PolicyRightNowText("P3  time " + FiveFB4("P3"))
+
+                            'Dim FiveFB4Str As String = "5FB4" + FiveFB4("GroupID") + FiveFB4("CrossRoadID") + FiveFB4("BusID") + "0" + FiveFB4("BusLineID") + "0" + FiveFB4("GoBack") + FiveFB4("BusPhase") + "0" + FiveFB4("Bus2CrossRoad") + FiveFB4("Strategy") + FiveFB4("Currentphase") + FiveFB4("P12") + FiveFB4("P22") + FiveFB4("P32")
+                            '_mainForm.Show_LBox_PolicyRightNowText("5FB4 Str " + FiveFB4Str + " Length " + FiveFB4Str.Length.ToString)
+                            'BusStrategy_Log2(ByVal GroupID As String, ByVal CrossRoadID As String, ByVal BusID As String, ByVal BusLineID As String, ByVal GoBack As String, ByVal BusPhase As String, ByVal Bus2CrossRoad As String, ByVal Strategy As String, ByVal Currentphase As String, ByVal P1 As String, ByVal P2 As String, ByVal P3 As String, ByVal Play1 As String, ByVal Play2 As String)
+                            Try
+                                BusStrategy_Log2(_mainForm.TBox_GroupID.Text.ToString, _mainForm.TBox_CrossRoadID.Text.ToString, FiveFB4("BusID"), FiveFB4("BusLineID"), FiveFB4("GoBack"), FiveFB4("BusPhase"), FiveFB4("Bus2CrossRoad"), FiveFB4("Strategy"), FiveFB4("Currentphase"), FiveFB4("P1"), FiveFB4("P2"), FiveFB4("P3"), FiveFB4("Play1"), FiveFB4("Play2"))
+                            Catch ex As Exception
+                                _mainForm.Show_LBox_PolicyRightNowText("Error  BusStrategy_Log " + ex.Message)
+                            End Try
+
+                            'Dim FiveFB4byte As Byte() = Incode_Step1(getSeqNum(), MarkAACommand(FiveFB4Str))
+                            'Dim tempstr As String = ByteArrayToStr2(FiveFB4byte)
+                            '_mainForm.Show_LBox_PolicyRightNowText("5FB4 message " + tempstr)
+
+                            FiveFB4.Clear()
+                            'BusComm_CommunicationStamp.Clear()
+                            BusComm_CommunicationStamp.Remove(nowPlayBusID)
+                            nowPlayBusID = "-1"
+                            _mainForm.Show_LBox_PolicyRightNowText("*****************************************************************************************************************************************")
+
+                        Catch pp As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText("$$$$$$$$$$$ Error in BackupP3 " + pp.Message)
+                        End Try
+
+                    End If
+
+
+
+                    BusPrime_activate = False
+                    Phase_Commands.Clear()
+                    FiveFB4.Clear()
+                    A1_Counter = 0
+                    nowPlayBusID = "-1"
+                    SlowBusID.Clear()
+                    ActivatedBusID.Clear()
+                    BusComm_CommunicationStamp.Clear()
+                    BusComm_TimeStamp = Nothing
+
+                Else
+                    '_mainForm.Show_LBox_PolicyRightNowText("Communicating with Bus ")
+
+                End If
+
+
+
+            End If
+
+            Try
+                If nowPlayBusID <> "-1" Then
+
+                    Dim BusComm_LastTime As DateTime = BusComm_CommunicationStamp(nowPlayBusID)
+
+                    Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_LastTime, Now)
+
+                    If DiffSecond > 300 Then
+
+                        nowPlayBusID = "-1"
+                        A1_Counter = 0
+                        'BusComm_CommunicationStamp.Clear()
+                        BusComm_CommunicationStamp.Remove(nowPlayBusID)
+
+                    End If
+
+                End If
+
+            Catch ex As Exception
+                _mainForm.Show_LBox_PolicyRightNowText("ErrorBusComm_CommunicationStamp" + ex.Message)
+            End Try
+
+
+        Catch ex As Exception
+            _mainForm.Show_LBox_PolicyRightNowText("Error in BusComm_Tick " + ex.Message)
+        End Try
+
+
+    End Sub
 End Class

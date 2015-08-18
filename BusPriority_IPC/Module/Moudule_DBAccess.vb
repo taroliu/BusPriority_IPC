@@ -138,6 +138,26 @@ Module Moudule_DBAccess
             End Try
 
 
+            Try
+                Dim sql_create As String = "CREATE TABLE [dbo].[SubPhaseLog](" +
+                                             "[CrossRoadID] [nvarchar](6) NULL," +
+                                             "[SubPhaseID] [nvarchar](4) NULL," +
+                                             "[TimeStarted] [datetime] NULL," +
+                                             "[SubPhaseInterval] [nvarchar](4) NULL," +
+                                             "[SubPhaseOriginal] [nvarchar](4) NULL," +
+                                             "[Changed] [nvarchar](4) NULL" +
+                                            ") ON [PRIMARY]"
+
+                Dim adapter_ceate As New SqlDataAdapter(sql_create, connection)
+                adapter_ceate.UpdateCommand = connection.CreateCommand
+                adapter_ceate.UpdateCommand.CommandText = sql_create
+                adapter_ceate.UpdateCommand.ExecuteNonQuery()
+                adapter_ceate.Dispose()
+            Catch ex As Exception
+                WriteLog(curPath, "Moudule_DBAccess", "SubPhaseLog is exit:" + ex.Message, _logEnable)
+            End Try
+
+
             connection.Close()
 
 

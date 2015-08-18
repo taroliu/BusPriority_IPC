@@ -38,6 +38,7 @@ Module Module_PublicParam
     Public All_Phases As String() = {"01", "02", "03", "04", "05", "06", "07", "08"}
     Public RefundSwitch As Boolean = False
 
+    Public BackUP_P3_Monitor_List As New ArrayList
 
     Public Current_Planid As String
     Public Changed_Planid As Boolean = False
