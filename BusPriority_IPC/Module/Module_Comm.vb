@@ -775,7 +775,7 @@ Module Module_Comm
                         Dim getPacket As String = getComplishPacketFromCar()
                         If getPacket <> "" Then
                             SaveDataFunction_Car(recFromCarData.Split(","))
-                            _mainForm.Show_LBox_ReceivedText_CAR("[R<--Bus] " + recFromCarData)
+                            _mainForm.Show_LBox_ReceivedText_CAR("[R<--Bus] " + getPacket) '車機封包串接問題處理_Modify Jason 20150818
                         Else
                             Exit Do
                         End If
