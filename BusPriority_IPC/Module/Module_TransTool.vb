@@ -101,6 +101,26 @@
             Return Nothing
         End Try
     End Function
+
+    Function HexStringTOInt(ByVal tstr As String, ByVal len As Integer) As Integer
+        Try
+            Dim newary() As Byte = StrToByteArray(tstr)
+            'Dim byString As String
+            Dim byInteger As Integer
+            For i As Integer = 0 To len - 1
+                If (newary(i) < &H40) Then
+                    byInteger = byInteger + (newary(i) - &H30) * Math.Pow(16, len - i - 1)
+                Else
+                    byInteger = byInteger + (newary(i) - &H37) * Math.Pow(16, len - i - 1)
+                End If
+            Next i
+            Return byInteger
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "Module_TransTool", "HexStringTOInt Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+            Return Nothing
+        End Try
+    End Function
     '****************************************************************************************************
     'Integer to Byte()
     'Dim vOut As Byte() = BitConverter.GetBytes(vIn)

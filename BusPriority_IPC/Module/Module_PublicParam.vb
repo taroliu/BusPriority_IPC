@@ -5,8 +5,8 @@ Imports System.Collections.ObjectModel
 Module Module_PublicParam
     '--Version MustFill-請轉成Hex
     Public VersionYear As String = "68" '104 HEX
-    Public VersionMonth As String = "05" 'HEX
-    Public VersionDay As String = "0D" 'HEX
+    Public VersionMonth As String = "08" 'HEX
+    Public VersionDay As String = "18" 'HEX
     Public VersionID As String = "01"  '0.1  0.0~9.9
 
     '-- File Parameter
@@ -40,6 +40,8 @@ Module Module_PublicParam
 
     Public BackUP_P3_Monitor_List As New ArrayList
 
+    Public Abnormal_Plan As Boolean = False
+
     Public Current_Planid As String
     Public Changed_Planid As Boolean = False
 
@@ -56,6 +58,15 @@ Module Module_PublicParam
     Public TriggerPointdList As New Hashtable  '-->BusPriority_daemon
     Public SegmentDataList As New Hashtable '-->BusPriority_daemon
     Public Phase_Commands As New Hashtable
+
+    Public PayBack_Commands As New Hashtable
+    Public PayBack_Status As Boolean = False
+    Public StartPayBack_Sequence As Boolean = False
+
+    Public PublicNormalGreen As Integer()
+    Public PublicShortGreen As Integer()
+    Public PublicMaxGreen As Integer()
+
     Public Original_Phase_Step As New Hashtable
     Public Monitor_Phase_Step As New Hashtable
     Public Refund_Commands As New Hashtable
@@ -88,6 +99,12 @@ Module Module_PublicParam
     Public BusGoBack_Direction As New Hashtable
 
     Public BusComm_TimeStamp As DateTime = Nothing
+
+    Public StartRec_TimeStamp As DateTime = Nothing
+    Public StopRec_TimeStamp As DateTime = Nothing
+
+    Public Rec_CycleID As Integer = -1
+    Public CycleID As Integer = 1
 
     Public BusComm_CommunicationStamp As New Hashtable
 

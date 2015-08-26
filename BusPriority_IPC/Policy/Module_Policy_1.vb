@@ -161,7 +161,7 @@ Module Module_Policy_1
                                     '_mainForm.Show_LBox_PolicyRightNowText("temp_A1_position = " + temp_A1_position + "   temp_p_position = " + temp_p_position)
 
                                     Dim temp_label As String = "P" + index.ToString
-                                    If temp_A1_distance < 20 And "P" + index.ToString = "P2" Then
+                                    If temp_A1_distance < 2 And "P" + index.ToString = "P2" Then
 
                                         '_mainForm.Show_LBox_PolicyRightNowText("A1 Distance with " + "P" + index.ToString + "_" + BusGoBack_Direction(Data_A1.GoBack) + "  -> " + temp_A1_distance.ToString)
 
@@ -286,7 +286,8 @@ Module Module_Policy_1
                                 Dim sendByte As Byte()
                                 Dim tranStr As String = "5F100400"   '5F10  路口手動 + 時相控制
                                 sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
-                                _mainForm.send_IC(sendByte)
+                                '_mainForm.send_IC(sendByte)
+
                                 '_mainForm.Show_LBox_PolicyRightNowText("離開點 啟動補償機制")
 
 
@@ -297,6 +298,7 @@ Module Module_Policy_1
                                 Try
                                     'FiveFB4.Add("P32", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                                     FiveFB4.Add("P3", Now.ToString("yyyy-MM-dd HH:mm:ss"))
+                                    StopRec_TimeStamp = Now
                                 Catch ex As Exception
                                     _mainForm.Show_LBox_PolicyRightNowText(" Error FiveFB4 P32 P3 " + ex.Message)
                                 End Try
@@ -404,7 +406,6 @@ Module Module_Policy_1
                             Try
                                 FiveFB4.Add("Strategy", "55")
                                 FiveFB4.Add("Play2", "NoChange")
-
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 55 " + ex.Message)
                             End Try
@@ -450,13 +451,15 @@ Module Module_Policy_1
                     Try
                         Phase_Commands.Clear()
                         _mainForm.Show_LBox_PolicyRightNowText("Bus left, Clear all  Bus Commands ")
+                        StopRec_TimeStamp = Now
+
                     Catch tx As Exception
 
                     End Try
 
 
                    
-                    'Put the payback here
+
                 ElseIf DataStructTouchPoint.PointType = "2" Or DataStructTouchPoint.PointType = "02" Then '決策點
                     Current_BusLineID = Data_A1.Route
                     AcceptA2_Procedure_2(DataStructTouchPoint, AcceptA2)
@@ -475,7 +478,7 @@ Module Module_Policy_1
     Public Sub AcceptA2_Procedure_2(ByVal rTouchPoint As Class_TriggerPoint, ByVal AcceptA2 As Class_A2)
 
         Try
-            If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False And SlowBusID.ContainsKey(AcceptA2.BusID.ToString) = False Then
+            If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False And SlowBusID.ContainsKey(AcceptA2.BusID.ToString) = False And PayBack_Status = False Then
                 'If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False Then
 
                 BusPrime_activate = True 'one Bus can only activate the bus prime Strategy once
@@ -487,7 +490,8 @@ Module Module_Policy_1
                 Try
                     'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                     FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
-
+                    StartRec_TimeStamp = Now
+                    Rec_CycleID = CycleID
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
                 End Try
@@ -630,7 +634,7 @@ Module Module_Policy_1
                 Dim Greenint(0 To TotalPhaseInt) As Integer
                 Dim Longer(0 To TotalPhaseInt) As Integer
                 Dim Shorter(0 To TotalPhaseInt) As Integer
-
+                Dim PedFlash(0 To TotalPhaseInt) As Integer
 
                 Dim BusPassPhase As String = ""
 
@@ -663,9 +667,11 @@ Module Module_Policy_1
                     '_mainForm.Show_LBox_PolicyRightNowText("Signal Status " + Data_5F13.SignalStatus(index))
 
                     Try
-                        Microgg(index) = MinGreen(Data_5F14.LightStatus(index))
+
                         Microggstr(index) = MinGreenHex(Data_5F14.LightStatus(index))
                         Yellowrr(index) = YellowplusRed(Data_5F14.LightStatus(index)) 'yellow plus red  
+                        PedFlash(index) = PedGreenFlashRed(Data_5F14.LightStatus(index))
+                        Microgg(index) = MinGreen(Data_5F14.LightStatus(index)) - PedFlash(index)
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("取不到最小綠 使用預設 10 秒")
                         Microgg(index) = 10
@@ -676,19 +682,18 @@ Module Module_Policy_1
 
                     Try
                         Greenint(index) = CurrentGreen(Data_5F15.Green(index))
+
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("取不到正常綠 無法跑策略")
                     End Try
 
 
-
-
-
                     'Massgg(index) = MaxGreen(Data_5F14.LightStatus(index))
-                    _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + index.ToString + "  綠燈 " + Greenint(index).ToString + " 最小綠 " + Microgg(index).ToString + "  黃燈+全紅 " + Yellowrr(index).ToString)
+                    _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + index.ToString + "  綠燈 " + Greenint(index).ToString + " 最小綠 " + Microgg(index).ToString + " 行閃行紅 " + PedFlash(index).ToString + " 黃燈+全紅 " + Yellowrr(index).ToString)
                     Pplay1 = Pplay1 + Greenint(index).ToString + "," + Yellowrr(index).ToString + ";"
 
                 Next
+
 
                 FiveFB4.Add("Play1", Pplay1)
 
@@ -724,6 +729,7 @@ Module Module_Policy_1
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error on extention" + ex.StackTrace)
                 End Try
+
 
                 'Dim Point1 As String = "25.072813,121.576059"  
                 'Dim Point2 As String = "25.073241,121.577815"
@@ -770,6 +776,8 @@ Module Module_Policy_1
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Bus2CrossRoad " + ex.Message)
                 End Try
+
+
 
 
                 If BusPhaseOrNot(BusLineID, CrossRoadID, Running_Bus_Goback) Then      'If isBusSameDirection(rTouchPoint.Direct) Then
@@ -962,7 +970,6 @@ Module Module_Policy_1
                         _mainForm.Show_LBox_PolicyRightNowText("<" + Data_A2.BusID + ">公車到路口剩餘秒數(" + RemanSecBusCrossRoad.ToString + ") 大於公車衝突時相剩餘紅燈(" + Cal_RG_j.ToString + ")-->維持原時制[2-1]")
 
 
-
                         Try
                             FiveFB4.Add("Strategy", "21")
                             FiveFB4.Add("Play2", "NoChange")
@@ -1132,7 +1139,16 @@ Module Module_Policy_1
                 End Try
 
             Else
-                '_mainForm.Show_LBox_PolicyRightNowText("已在執行公車優先 不能執行公車優先 1")
+
+                If PayBack_Status = True Then
+                    _mainForm.Show_LBox_PolicyRightNowText("進行補償 不執行公車優先 ")
+                    Try
+                        FiveFB4.Add("Strategy", "88")
+                        FiveFB4.Add("Play2", "NoChange")
+                    Catch ex As Exception
+                        _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 88 " + ex.Message)
+                    End Try
+                End If
 
             End If
         Catch ex As Exception
@@ -1140,13 +1156,15 @@ Module Module_Policy_1
             _mainForm.Show_LBox_PolicyRightNowText(trace.ToString)
             WriteLog(curPath, "Module_Policy_1", "AcceptA2_Procedure_2 Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
         End Try
+
     End Sub
+
 
     Public Sub AcceptA2_Procedure_3(ByVal rTouchPoint As Class_TriggerPoint, ByVal AcceptA2 As Class_A1)
 
 
         Try
-            If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False And SlowBusID.ContainsKey(AcceptA2.BusID.ToString) = False Then
+            If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False And SlowBusID.ContainsKey(AcceptA2.BusID.ToString) = False And PayBack_Status = False Then
                 'If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False Then
 
                 BusPrime_activate = True 'one Bus can only activate the bus prime Strategy once
@@ -1158,7 +1176,8 @@ Module Module_Policy_1
                 Try
                     'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                     FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
-
+                    StartRec_TimeStamp = Now
+                    Rec_CycleID = CycleID
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
                 End Try
@@ -1301,7 +1320,7 @@ Module Module_Policy_1
                 Dim Greenint(0 To TotalPhaseInt) As Integer
                 Dim Longer(0 To TotalPhaseInt) As Integer
                 Dim Shorter(0 To TotalPhaseInt) As Integer
-
+                Dim PedFlash(0 To TotalPhaseInt) As Integer
 
                 Dim BusPassPhase As String = ""
 
@@ -1337,6 +1356,7 @@ Module Module_Policy_1
                         Microgg(index) = MinGreen(Data_5F14.LightStatus(index))
                         Microggstr(index) = MinGreenHex(Data_5F14.LightStatus(index))
                         Yellowrr(index) = YellowplusRed(Data_5F14.LightStatus(index)) 'yellow plus red  
+                        PedFlash(index) = PedGreenFlashRed(Data_5F14.LightStatus(index))
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("取不到最小綠 使用預設 10 秒")
                         Microgg(index) = 10
@@ -1347,19 +1367,20 @@ Module Module_Policy_1
 
                     Try
                         Greenint(index) = CurrentGreen(Data_5F15.Green(index))
+
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("取不到正常綠 無法跑策略")
                     End Try
 
 
-
-
-
                     'Massgg(index) = MaxGreen(Data_5F14.LightStatus(index))
-                    _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + index.ToString + "  綠燈 " + Greenint(index).ToString + " 最小綠 " + Microgg(index).ToString + "  黃燈+全紅 " + Yellowrr(index).ToString)
+                    _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + index.ToString + "  綠燈 " + Greenint(index).ToString + " 最小綠 " + Microgg(index).ToString + " 行閃行紅 " + PedFlash(index).ToString + " 黃燈+全紅 " + Yellowrr(index).ToString)
                     Pplay1 = Pplay1 + Greenint(index).ToString + "," + Yellowrr(index).ToString + ";"
 
                 Next
+
+                
+
 
                 FiveFB4.Add("Play1", Pplay1)
 
@@ -1395,6 +1416,7 @@ Module Module_Policy_1
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error on extention" + ex.StackTrace)
                 End Try
+                
 
                 'Dim Point1 As String = "25.072813,121.576059"  
                 'Dim Point2 As String = "25.073241,121.577815"
@@ -1441,6 +1463,8 @@ Module Module_Policy_1
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Bus2CrossRoad " + ex.Message)
                 End Try
+
+
 
 
                 If BusPhaseOrNot(BusLineID, CrossRoadID, Running_Bus_Goback) Then      'If isBusSameDirection(rTouchPoint.Direct) Then
@@ -1803,7 +1827,16 @@ Module Module_Policy_1
                 End Try
 
             Else
-                '_mainForm.Show_LBox_PolicyRightNowText("已在執行公車優先 不能執行公車優先 1")
+
+                If PayBack_Status = True Then
+                    _mainForm.Show_LBox_PolicyRightNowText("進行補償 不執行公車優先 ")
+                    Try
+                        FiveFB4.Add("Strategy", "88")
+                        FiveFB4.Add("Play2", "NoChange")
+                    Catch ex As Exception
+                        _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 88 " + ex.Message)
+                    End Try
+                End If
 
             End If
         Catch ex As Exception

@@ -241,6 +241,15 @@ Module Module_PacketageSave  '-->BusPriority_daemon
             Dim sStepSec As String = SaveData.Substring(28, 4)
             Dim sSignalStatus As String = SaveData.Substring(32, SaveData.Length - 38)
 
+            Dim Rec As Boolean = False
+            Dim paybackamount As Integer = 0
+            Dim paybackamountStr As String = ""
+
+            Dim Now_Green As Integer = 0
+            Dim small_Green As Integer = 0
+            Dim big_Green As Integer = 0
+
+
             Data_5F03 = New Class_5F03(sPhaseOrder, sSignalMap, sSignalCount, sSubPhaseID, sStepID, sStepSec, sSignalStatus, Now)
 
             If Changed_Planid = True Then
@@ -251,6 +260,22 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                 RanFullCycle = False
 
             End If
+
+
+            Try
+                Dim stepid As Integer = HexStringTOInt(sStepID, 2)
+
+                If stepid > 8 Or stepid < 1 Then
+                    _mainForm.Show_LBox_PolicyRightNowText(sStepID + " 異常時制 " + stepid.ToString)
+                    Abnormal_Plan = True
+                Else
+                    '_mainForm.Show_LBox_PolicyRightNowText(sStepID + " Normal Stepid " + stepid.ToString)
+                    Abnormal_Plan = False
+                End If
+
+            Catch ex As Exception
+                _mainForm.Show_LBox_PolicyRightNowText("Error in Detecting abnormal stepid " + ex.Message)
+            End Try
 
             Try
                 If SaveData_5F03_LastPhase Is Nothing Or SaveData_5F03_LastPhase <> sSubPhaseID Then
@@ -268,10 +293,14 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Dim Greenint As Integer
                         Dim Yellowrr As Integer
                         Dim PhaseLength As Long
+                        'Public PublicNormalGreen As Integer()
+                        'Public PublicShortGreen As Integer()
+                        'Public PublicMaxGreen As Integer()
 
                         Dim index As Integer = Val(SaveData_5F03_LastPhase) - 1
 
                         Try
+                            
                             Greenint = CurrentGreen(Data_5F15.Green(index))
                             Yellowrr = YellowplusRed(Data_5F14.LightStatus(index))
                             PhaseLength = Greenint + Yellowrr
@@ -286,40 +315,157 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         '_mainForm.Show_LBox_PolicyRightNowText(" Interval " + wD.ToString)
 
                         Dim difference As Integer = wD - PhaseLength
+                        Dim difference2 As Integer = 0
                         '_mainForm.Show_LBox_PolicyRightNowText(SaveData_5F03_LastPhase.ToString + " 分相 : " + wD.ToString + " 秒  正常秒數 : " + PhaseLength.ToString + " 變化 " + difference.ToString)
 
                         'SubPhase_Log(_mainForm.TBox_CrossRoadID.Text.ToString, SaveData_5F03_LastPhase.ToString, wD.ToString, SaveData_5F03_TimeStamp, PhaseLength, difference)
 
                         SubPhase_Log(_mainForm.TBox_CrossRoadID.Text.ToString, SaveData_5F03_LastPhase.ToString, wD.ToString, SaveData_5F03_TimeStamp, PhaseLength, difference)
-                        _mainForm.Show_LBox_PolicyRightNowText("Message " + SaveData)
+                        '_mainForm.Show_LBox_PolicyRightNowText("Message " + SaveData)
+
+
+
+                        Dim difftime As TimeSpan
+
+
+                        If StartRec_TimeStamp <> Nothing Then
+
+                            difftime = Now - StartRec_TimeStamp
+
+                            If difftime.TotalMinutes < 3 And Abnormal_Plan = False And Rec = False Then
+                                Rec = True
+                                _mainForm.Show_LBox_PolicyRightNowText("Strategy Activated Start Recording Difference")
+
+                            End If
+
+                        End If
+
+                        'If StopRec_TimeStamp <> Nothing Then
+
+                        '    difftime = Now - StopRec_TimeStamp
+
+                        '    If difftime.TotalSeconds < 30 And Abnormal_Plan = False Then
+                        '        Rec = True
+                        '    ElseIf difftime.TotalSeconds > 30 And Rec = True And difftime.TotalMinutes < 3 Then
+                        '        Rec = False
+                        '        _mainForm.Show_LBox_PolicyRightNowText("Strategy DeActivated Stop Recording Difference")
+                        '    End If
+
+                        'End If
+                        _mainForm.Show_LBox_PolicyRightNowText(" CycleID " + CycleID.ToString + " Rec_CycleID " + Rec_CycleID.ToString + " Rec " + Rec.ToString)
+
+                        If Rec_CycleID <> -1 And CycleID = Rec_CycleID And Abnormal_Plan = False Then
+                            Rec = True
+                        ElseIf CycleID >= (Rec_CycleID + 1) Then
+                            Rec = False
+                            '_mainForm.Show_LBox_PolicyRightNowText("Strategy DeActivated Stop Recording Difference")
+                        End If
+
 
                         If difference > 0 Then
                             _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + SaveData_5F03_LastPhase.ToString + " 多跑了 " + difference.ToString + " 秒")
-                        Else
+                        ElseIf difference < 0 Then
                             _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + SaveData_5F03_LastPhase.ToString + " 少跑了 " + difference.ToString + " 秒")
-                        End If
-
-                        If Payback.Contains(SaveData_5F03_LastPhase) Then
-                            Dim tempstorage As Integer = Payback(SaveData_5F03_LastPhase)
-                            difference = difference + tempstorage
-                            Payback.Remove(SaveData_5F03_LastPhase)
-                            Payback.Add(SaveData_5F03_LastPhase, difference)
                         Else
-                            Payback.Add(SaveData_5F03_LastPhase, difference)
+                            _mainForm.Show_LBox_PolicyRightNowText(" 分相 " + SaveData_5F03_LastPhase.ToString)
+                        End If
+
+                        If Rec = True Then
+                            difference2 = difference
+                            
+                        End If
+
+                        Try
+                            If Payback.Contains(SaveData_5F03_LastPhase) Then
+                                Dim tempstorage As Integer = Payback(SaveData_5F03_LastPhase)
+                                difference2 = difference2 + tempstorage
+                            End If
+                        Catch lx As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText("Error in getting payback balance " + lx.Message)
+                        End Try
+                       
+
+                        'Dim Now_Green As Integer = PublicNormalGreen(index)
+                        'Dim small_Green As Integer = PublicShortGreen(index)
+                        'Dim big_Green As Integer = PublicMaxGreen(index)
+
+                        Dim tempint As Integer = 0
+                        Dim original_amount = 0
+
+                        Try
+                            If Rec Then
+                                Now_Green = CurrentGreen(Data_5F15.Green(index))
+                                small_Green = MinGreen(Data_5F14.LightStatus(index))
+                                Dim tempindex As Integer = 0
+
+                                If index = 0 Then
+                                    tempindex = TotalPhaseInt - 1
+                                Else
+                                    tempindex = index - 1
+                                End If
+
+                                big_Green = Now_Green + MinGreen(Data_5F14.LightStatus(tempindex)) + 10
+
+                            End If
+
+                        Catch ex As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText(" Error in Getting Now_Green small_Green big_Green " + ex.Message)
+                        End Try
+                        
+
+                        If difference2 > 0 Then
+
+                            If (Now_Green - difference2) > small_Green Then
+                                paybackamountStr = IntToHexString(Now_Green - difference2, 2)
+                                tempint = Now_Green - difference2
+                                _mainForm.Show_LBox_PolicyRightNowText(" 應該從 " + SaveData_5F03_LastPhase + " 分相 取回" + tempint.ToString + " 秒 ")
+
+                                PayBack_Commands.Add(SaveData_5F03_LastPhase, "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
+                                _mainForm.Show_LBox_PolicyRightNowText(" 存入補償命令 " + "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
+                                original_amount = 0
+
+                            ElseIf (Now_Green - difference2) < small_Green Then
+                                paybackamountStr = IntToHexString(small_Green, 2)
+                                tempint = small_Green
+                                _mainForm.Show_LBox_PolicyRightNowText(" 應該從 " + SaveData_5F03_LastPhase + " 分相 取回" + tempint.ToString + " 秒 ")
+
+                                PayBack_Commands.Add(SaveData_5F03_LastPhase, "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
+                                _mainForm.Show_LBox_PolicyRightNowText(" 存入補償命令 " + "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
+
+                                original_amount = difference2 - (Now_Green - small_Green)
+                                _mainForm.Show_LBox_PolicyRightNowText(" 還需繼續從 " + SaveData_5F03_LastPhase + " 分相取回 " + original_amount.ToString + " 秒 ")
+                            End If
+
+                        ElseIf difference2 < 0 Then
+                            Dim ABSTest As Integer = System.Math.Abs(difference2)
+
+                            paybackamountStr = IntToHexString(Now_Green + ABSTest, 2)
+                            tempint = Now_Green + ABSTest
+                            _mainForm.Show_LBox_PolicyRightNowText(" 應該歸還 " + SaveData_5F03_LastPhase + " 分相 " + tempint.ToString + " 秒 ")
+
+                            PayBack_Commands.Add(SaveData_5F03_LastPhase, "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
+                            _mainForm.Show_LBox_PolicyRightNowText(" 存入補償命令 " + "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
+
+                            original_amount = 0
+
+                        Else
+                            original_amount = 0
+
                         End If
 
 
 
+                        If Payback.Contains(SaveData_5F03_LastPhase) And original_amount <> 0 Then
 
-                        Dim MyKeys As ICollection
-                        MyKeys = Payback.Keys()
-                        TotalCycleSec = 0
+                            Payback.Remove(SaveData_5F03_LastPhase)
+                            Payback.Add(SaveData_5F03_LastPhase, original_amount)
+                        ElseIf Payback.Contains(SaveData_5F03_LastPhase) And original_amount = 0 Then
+                            Payback.Remove(SaveData_5F03_LastPhase)
 
-                        For Each Key In MyKeys
-                            '_mainForm.Show_LBox_PolicyRightNowText(" Payback Bank 分相 " + Key.ToString + " " + Payback(Key).ToString)
-                        Next
+                        ElseIf original_amount <> 0 Then
+                            Payback.Add(SaveData_5F03_LastPhase, original_amount)
 
-
+                        End If
 
                     End If
 
@@ -329,9 +475,9 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                 End If
 
-            Catch ex As Exception
-
-                _mainForm.Show_LBox_PolicyRightNowText("5F03 Time Stamp Error " + ex.StackTrace)
+            Catch ax As Exception
+                Dim trace As New System.Diagnostics.StackTrace(ax, True)
+                _mainForm.Show_LBox_PolicyRightNowText("5F03 Time Stamp Error " + ax.StackTrace + " Trace" + trace.GetFrame(0).GetFileLineNumber().ToString)
             End Try
 
 
@@ -372,6 +518,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                     Payback.Clear()
 
                 End If
+
 
 
             Catch ex As Exception

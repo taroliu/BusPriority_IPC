@@ -1259,13 +1259,14 @@ Public Class MainForm
                             Dim sendByte As Byte()
                             Dim tranStr As String = "5F100400"   '5F10  路口手動 + 時相控制
                             sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
-                            _mainForm.send_IC(sendByte)
+                            '_mainForm.send_IC(sendByte)
                             '_mainForm.Show_LBox_PolicyRightNowText("離開點 啟動補償機制")
                             A1_Counter = 0
                             ActivatedBusID.Remove(FiveFB4("BusID"))
                             Try
                                 'FiveFB4.Add("P32", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                                 FiveFB4.Add("P3", Now.ToString("yyyy-MM-dd HH:mm:ss"))
+                                StopRec_TimeStamp = Now
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText(" Error FiveFB4 P32 P3 " + ex.Message)
                             End Try
@@ -1320,6 +1321,7 @@ Public Class MainForm
                     BusComm_CommunicationStamp.Clear()
                     BusComm_TimeStamp = Nothing
 
+                    _mainForm.Show_LBox_PolicyRightNowText("Bus left, Clear all  Bus Commands ")
                 Else
                     '_mainForm.Show_LBox_PolicyRightNowText("Communicating with Bus ")
 

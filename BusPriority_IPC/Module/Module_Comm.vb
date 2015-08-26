@@ -167,7 +167,7 @@ Module Module_Comm
                                             Current_Planid = Data_5F18.PlanID
                                             Changed_Planid = True
                                         Else
-                                            _mainForm.Show_LBox_PolicyRightNowText("Old Planid")
+                                            '_mainForm.Show_LBox_PolicyRightNowText("Old Planid")
                                             Changed_Planid = False
                                         End If
 
@@ -271,6 +271,17 @@ Module Module_Comm
                     Try
                         If NowSubPhaseIDstring <> LastSubPhaseIDstring Then
                             'Command("5F1C" + NowSubPhaseIDstring + "00" + RemainHex)
+                            If NowSubPhaseIDstring = "01" Then
+                                CycleID = CycleID + 1
+                                If CycleID > 100000 Then
+                                    CycleID = 0
+                                End If
+
+                                'If CycleID = Rec_CycleID + 1 Then
+                                '    PayBack_Status = True
+                                'End If
+                            End If
+
 
                             Try
 
@@ -284,6 +295,32 @@ Module Module_Comm
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText("Error in phase Commands" + ex.ToString)
                             End Try
+
+
+                            Try
+                                If PayBack_Commands.Count = 0 Then
+
+                                    PayBack_Status = False
+
+
+                                End If
+
+                                If PayBack_Commands.ContainsKey(NowSubPhaseIDstring) Then
+                                    _mainForm.Show_LBox_PolicyRightNowText("payBack 5F1C  " + PayBack_Commands(NowSubPhaseIDstring))
+
+                                    Command(PayBack_Commands(NowSubPhaseIDstring))
+                                    PayBack_Commands.Remove(NowSubPhaseIDstring)
+                                    PayBack_Status = True
+
+                                End If
+
+
+
+                            Catch ex As Exception
+                                _mainForm.Show_LBox_PolicyRightNowText("Error in PayBack_Commands Commands" + ex.ToString)
+                            End Try
+
+
 
                             'If Not String.IsNullOrEmpty(Phase_Commands(NowSubPhaseIDstring)) Then
 

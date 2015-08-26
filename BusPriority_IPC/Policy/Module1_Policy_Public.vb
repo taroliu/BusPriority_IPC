@@ -442,6 +442,18 @@
         End Try
 
     End Function
+    Public Function PedGreenFlashRed(ByVal Light As String) As Integer
+
+        Try
+            Dim PedGreenFlash As Integer = Val(HexStringTOIntString(Light.Substring(10, 2), 2))
+            Dim PedRed As Integer = Val(HexStringTOIntString(Light.Substring(12, 2), 2))
+            Return PedGreenFlash + PedRed
+
+        Catch ex As Exception
+            Return Nothing
+        End Try
+
+    End Function
     Public Function CurrentGreen(ByVal Light As String) As Integer
 
         Try
