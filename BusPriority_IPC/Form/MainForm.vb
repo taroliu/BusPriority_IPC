@@ -1230,14 +1230,20 @@ Public Class MainForm
     Private Sub Timer_Auto0F04_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_Auto0F04.Tick
 
         Dim iSpan As Double = (Now() - DiffTimeOfTC_Request).TotalSeconds
-
+        _mainForm.Show_LBox_ReceivedText_IC("無訊息己經 " + iSpan.ToString + " 秒") 'Jason 20150826 號誌通訊異常,重新啟動-II
         If iSpan > 180 Then
             Dim newHardWareStatus As String = SetIPC_ConnectError(True)
-            'Jason 20150826 號誌通訊異常,重新啟動
+            'Jason 20150826 號誌通訊異常,重新啟動-II
             'S----------------------------------------------------
-            If mySerialPort.IsOpen() Then
-                mySerialPort.Close()
-                OpenSerialPort()
+            'OLD
+            'If mySerialPort.IsOpen() Then
+            '    mySerialPort.Close()
+            '    _mainForm.Show_LBox_ReceivedText_IC("Timer_Auto0F04_Tick OpenSerialPort".ToString)
+            '    OpenSerialPort()
+            'End If
+            'NEW
+            If iSpan > 240 Then
+                System.Diagnostics.Process.Start("shutdown", "-f -r -t 00")
             End If
             'E---------------------------------------------------
         End If
