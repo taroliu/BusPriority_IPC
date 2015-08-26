@@ -191,6 +191,8 @@ Public Class MainForm
     'E---------------------------------------------------------------------------------------
     Private Sub MainForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Try
+
+
             init_finish = False
             Module_Comm._mainForm = Me '20131216介面承接LCS燈號 下載成功訊息.
             iniSemaphore()
@@ -1231,8 +1233,13 @@ Public Class MainForm
 
         If iSpan > 180 Then
             Dim newHardWareStatus As String = SetIPC_ConnectError(True)
-            Dim sendByte As Byte() = Incode_Step1(getSeqNum(), MarkAACommand("0F04" + newHardWareStatus))
-            Socket_WriteToCC(sendByte)
+            'Jason 20150826 號誌通訊異常,重新啟動
+            'S----------------------------------------------------
+            If mySerialPort.IsOpen() Then
+                mySerialPort.Close()
+                OpenSerialPort()
+            End If
+            'E---------------------------------------------------
         End If
     End Sub
     'E-------------------------------------------------------------------------------------
