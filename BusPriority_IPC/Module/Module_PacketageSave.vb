@@ -418,7 +418,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         If difference2 > 0 Then
 
                             If (Now_Green - difference2) > small_Green Then
-                                paybackamountStr = IntToHexString(Now_Green - difference2, 2)
+                                paybackamountStr = IntToHexString(Now_Green - difference2 - PedFlash, 2)
                                 tempint = Now_Green - difference2 - PedFlash
                                 _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + tempint.ToString + " 秒 ")
 
@@ -427,7 +427,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                                 original_amount = 0
 
                             ElseIf (Now_Green - difference2) < small_Green Then
-                                paybackamountStr = IntToHexString(small_Green, 2)
+                                paybackamountStr = IntToHexString(small_Green - PedFlash, 2)
                                 tempint = small_Green - PedFlash
                                 _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + tempint.ToString + " 秒 ")
 
@@ -441,7 +441,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         ElseIf difference2 < 0 Then
                             Dim ABSTest As Integer = System.Math.Abs(difference2)
 
-                            paybackamountStr = IntToHexString(Now_Green + ABSTest, 2)
+                            paybackamountStr = IntToHexString(Now_Green + ABSTest - PedFlash, 2)
                             tempint = Now_Green + ABSTest - PedFlash
                             _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 增加至 " + tempint.ToString + " 秒 ")
 

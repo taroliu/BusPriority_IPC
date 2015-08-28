@@ -668,10 +668,11 @@ Module Module_Policy_1
 
                     Try
 
-                        Microggstr(index) = MinGreenHex(Data_5F14.LightStatus(index))
+
                         Yellowrr(index) = YellowplusRed(Data_5F14.LightStatus(index)) 'yellow plus red  
                         PedFlash(index) = PedGreenFlashRed(Data_5F14.LightStatus(index))
                         Microgg(index) = MinGreen(Data_5F14.LightStatus(index)) - PedFlash(index)
+                        Microggstr(index) = IntToHexString(Microgg(index), 2)
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("取不到最小綠 使用預設 10 秒")
                         Microgg(index) = 10
@@ -1353,10 +1354,10 @@ Module Module_Policy_1
                     '_mainForm.Show_LBox_PolicyRightNowText("Signal Status " + Data_5F13.SignalStatus(index))
 
                     Try
-                        Microgg(index) = MinGreen(Data_5F14.LightStatus(index))
-                        Microggstr(index) = MinGreenHex(Data_5F14.LightStatus(index))
                         Yellowrr(index) = YellowplusRed(Data_5F14.LightStatus(index)) 'yellow plus red  
                         PedFlash(index) = PedGreenFlashRed(Data_5F14.LightStatus(index))
+                        Microgg(index) = MinGreen(Data_5F14.LightStatus(index)) - PedFlash(index)
+                        Microggstr(index) = IntToHexString(Microgg(index), 2)
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("取不到最小綠 使用預設 10 秒")
                         Microgg(index) = 10
