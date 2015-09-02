@@ -43,8 +43,8 @@ Module Module_Policy_1
                             TotalCycleMin = "05"
                         End If
 
-                        tranStr = tranStr + TotalCycleMin
-
+                        'tranStr = tranStr + TotalCycleMin
+                        tranStr = tranStr + "0A"
                         
 
                         sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
@@ -205,8 +205,8 @@ Module Module_Policy_1
                                 TotalCycleMin = "05"
                             End If
 
-                            tranStr = tranStr + TotalCycleMin
-
+                            'tranStr = tranStr + TotalCycleMin
+                            tranStr = tranStr + "0A"
 
                             sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
                             _mainForm.send_IC(sendByte)
@@ -260,7 +260,9 @@ Module Module_Policy_1
                                         TotalCycleMin = "05"
                                     End If
 
-                                    tranStr = tranStr + TotalCycleMin
+                                    'tranStr = tranStr + TotalCycleMin
+                                    tranStr = tranStr + "0A"
+
                                     sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
                                     _mainForm.send_IC(sendByte)
                                 End If
