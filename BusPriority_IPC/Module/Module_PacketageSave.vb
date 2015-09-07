@@ -380,7 +380,9 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Try
                             If Payback.Contains(SaveData_5F03_LastPhase) Then
                                 Dim tempstorage As Integer = Payback(SaveData_5F03_LastPhase)
+                                _mainForm.Show_LBox_PolicyRightNowText("Payback Storage " + tempstorage.ToString)
                                 difference2 = difference2 + tempstorage
+                                _mainForm.Show_LBox_PolicyRightNowText("Payback Total " + difference2.ToString)
                             End If
                         Catch lx As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error in getting payback balance " + lx.Message)
@@ -478,12 +480,13 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                             Payback.Remove(SaveData_5F03_LastPhase)
                             Payback.Add(SaveData_5F03_LastPhase, original_amount)
+                            _mainForm.Show_LBox_PolicyRightNowText(SaveData_5F03_LastPhase + " Save PayBack Amount " + original_amount.ToString)
                         ElseIf Payback.Contains(SaveData_5F03_LastPhase) And original_amount = 0 Then
                             Payback.Remove(SaveData_5F03_LastPhase)
 
                         ElseIf original_amount <> 0 Then
                             Payback.Add(SaveData_5F03_LastPhase, original_amount)
-
+                            _mainForm.Show_LBox_PolicyRightNowText(SaveData_5F03_LastPhase + " Save PayBack Amount " + original_amount.ToString)
                         End If
 
                     End If
