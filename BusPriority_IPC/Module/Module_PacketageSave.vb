@@ -397,20 +397,20 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Dim original_amount = 0
 
                         Try
-                            If Rec Then
-                                Now_Green = CurrentGreen(Data_5F15.Green(index))
-                                small_Green = MinGreen(Data_5F14.LightStatus(index))
-                                Dim tempindex As Integer = 0
+                            Now_Green = CurrentGreen(Data_5F15.Green(index))
+                            small_Green = MinGreen(Data_5F14.LightStatus(index))
 
-                                If index = 0 Then
-                                    tempindex = TotalPhaseInt - 1
-                                Else
-                                    tempindex = index - 1
-                                End If
 
-                                big_Green = Now_Green + MinGreen(Data_5F14.LightStatus(tempindex)) + 10
+                            Dim tempindex As Integer = 0
 
+                            If index = 0 Then
+                                tempindex = TotalPhaseInt - 1
+                            Else
+                                tempindex = index - 1
                             End If
+
+                            big_Green = Now_Green + MinGreen(Data_5F14.LightStatus(tempindex)) + 10
+
 
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText(" Error in Getting Now_Green small_Green big_Green " + ex.Message)
@@ -428,7 +428,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                                 paybackamountStr = IntToHexString(tempint, 2)
 
-                                _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + tempint.ToString + " 秒 ")
+                                _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + tempint.ToString + " 秒 $")
 
                                 PayBack_Commands.Add(SaveData_5F03_LastPhase, "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
                                 _mainForm.Show_LBox_PolicyRightNowText(" 存入補償命令 " + "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
@@ -443,7 +443,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                                 paybackamountStr = IntToHexString(tempint, 2)
 
-                                _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + tempint.ToString + " 秒 ")
+                                _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + tempint.ToString + " 秒 *")
 
                                 PayBack_Commands.Add(SaveData_5F03_LastPhase, "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
                                 _mainForm.Show_LBox_PolicyRightNowText(" 存入補償命令 " + "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
