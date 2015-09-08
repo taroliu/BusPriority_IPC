@@ -417,7 +417,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         End Try
                         
 
-                        If difference2 > 0 Then
+                        If difference2 > 3 Then
 
                             If (Now_Green - difference2) > small_Green Then
                                 tempint = Now_Green - difference2 - PedFlash
@@ -457,7 +457,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                                 _mainForm.Show_LBox_PolicyRightNowText(" 還需繼續從 " + SaveData_5F03_LastPhase + " 分相取回 " + original_amount.ToString + " 秒 ")
                             End If
 
-                        ElseIf difference2 < 0 Then
+                        ElseIf difference2 < -3 Then
                             Dim ABSTest As Integer = System.Math.Abs(difference2)
 
                             paybackamountStr = IntToHexString(Now_Green + ABSTest - PedFlash, 2)
