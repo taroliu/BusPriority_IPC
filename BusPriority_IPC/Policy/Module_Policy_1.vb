@@ -493,7 +493,6 @@ Module Module_Policy_1
                     'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                     FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
                     StartRec_TimeStamp = Now
-                    Rec_CycleID = CycleID
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
                 End Try
@@ -819,6 +818,7 @@ Module Module_Policy_1
 
 
                             Try
+                                Rec_CycleID = CycleID
                                 FiveFB4.Add("Strategy", "12")
                                 FiveFB4.Add("Play2", Pplay2)
                             Catch ex As Exception
@@ -829,6 +829,7 @@ Module Module_Policy_1
                             _mainForm.Show_LBox_PolicyRightNowText("<" + Data_A2.BusID + ">公車到路口剩餘秒數(" + RemanSecBusCrossRoad.ToString + ") 非第一步階無法延長綠燈 " + Cal_RG_i.ToString + " -->公車競爭分相縮短至最短綠[1-3]")
 
                             Try
+                                Rec_CycleID = CycleID
                                 FiveFB4.Add("Strategy", "13")
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 13 " + ex.Message)
@@ -986,6 +987,7 @@ Module Module_Policy_1
 
 
                         Try
+                            Rec_CycleID = CycleID
                             FiveFB4.Add("Strategy", "22")
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 22 " + ex.Message)
@@ -1179,8 +1181,7 @@ Module Module_Policy_1
                 Try
                     'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                     FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
-                    StartRec_TimeStamp = Now
-                    Rec_CycleID = CycleID
+                    StartRec_TimeStamp = Now                 
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
                 End Try
@@ -1506,6 +1507,7 @@ Module Module_Policy_1
 
 
                             Try
+                                Rec_CycleID = CycleID
                                 FiveFB4.Add("Strategy", "12")
                                 FiveFB4.Add("Play2", Pplay2)
                             Catch ex As Exception
@@ -1516,6 +1518,7 @@ Module Module_Policy_1
                             _mainForm.Show_LBox_PolicyRightNowText("<" + Data_A2.BusID + ">公車到路口剩餘秒數(" + RemanSecBusCrossRoad.ToString + ") 非第一步階無法延長綠燈 " + Cal_RG_i.ToString + " -->公車競爭分相縮短至最短綠[1-3]")
 
                             Try
+                                Rec_CycleID = CycleID
                                 FiveFB4.Add("Strategy", "13")
                             Catch ex As Exception
                                 _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 13 " + ex.Message)
@@ -1674,6 +1677,7 @@ Module Module_Policy_1
 
 
                         Try
+                            Rec_CycleID = CycleID
                             FiveFB4.Add("Strategy", "22")
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 22 " + ex.Message)
