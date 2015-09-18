@@ -306,7 +306,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                             Yellowrr = YellowplusRed(Data_5F14.LightStatus(index))
                             PedFlash = PedGreenFlashRed(Data_5F14.LightStatus(index))
                             PhaseLength = Greenint + Yellowrr
-                            '_mainForm.Show_LBox_PolicyRightNowText(" Green " + Greenint.ToString + " Yellowrr " + Yellowrr.ToString)
+                            '_mainForm.Show_LBox_PolicyRightNowText(" 正常綠 " + Greenint.ToString + " PedFlash " + Yellowrr.ToString)
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error in Calculating Phase Length " + ex.Message)
                         End Try
@@ -411,21 +411,21 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                             big_Green = Now_Green + MinGreen(Data_5F14.LightStatus(tempindex)) + 10
 
-
+                            _mainForm.Show_LBox_PolicyRightNowText(" 正常綠 " + Now_Green.ToString + " 最小綠 " + small_Green.ToString + " pedflash " + PedFlash.ToString)
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText(" Error in Getting Now_Green small_Green big_Green " + ex.Message)
                         End Try
                         
 
                         If difference2 > 3 Then
-                            If Now_Green = small_Green + PedFlash Then
-                                _mainForm.Show_LBox_PolicyRightNowText(" 正常綠 等於最小綠加行閃行紅 不進行補償 ")
+                            If Now_Green = small_Green Then
+                                _mainForm.Show_LBox_PolicyRightNowText(" 正常綠 等於最小綠 不進行補償 ")
                                 original_amount = 0
 
                             Else
 
-                                If (Now_Green - difference2) > small_Green Then
-                                    tempint = Now_Green - difference2 - PedFlash
+                                If (Now_Green - difference2) >= small_Green Then
+                                    tempint = Now_Green - difference2
 
                                     If tempint < 0 Then
                                         tempint = 0
@@ -442,27 +442,26 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                                 ElseIf (Now_Green - difference2) < small_Green Then
                                     tempint = small_Green - PedFlash
 
-                                    If tempint < 0 Then
+                                    If tempint <= 0 Then
                                         tempint = 0
                                     End If
 
-                                    paybackamountStr = IntToHexString(tempint, 2)
+                                    If tempint = 0 Then
+                                        paybackamountStr = IntToHexString(1, 2)
+                                    ElseIf tempint > 0 Then
+                                        paybackamountStr = IntToHexString(tempint, 2)
+                                    End If
 
-
-                                    _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + tempint.ToString + " 秒 *")
+                                    _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 減少至 " + paybackamountStr + " 秒 *")
 
                                     PayBack_Commands.Add(SaveData_5F03_LastPhase, "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
                                     _mainForm.Show_LBox_PolicyRightNowText(" 存入補償命令 " + "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
 
-                                    original_amount = difference2 - (Now_Green - small_Green)
-
-
-
                                     If tempint = 0 Then
-                                        original_amount = difference2 - (Now_Green - PedFlash)
+                                        original_amount = difference2 - (Now_Green - small_Green)
+                                    ElseIf tempint > 0 Then
+                                        original_amount = difference2 - (Now_Green - (small_Green - PedFlash))
                                     End If
-
-
 
 
                                     _mainForm.Show_LBox_PolicyRightNowText(" 還需繼續從 " + SaveData_5F03_LastPhase + " 分相取回 " + original_amount.ToString + " 秒 ")
