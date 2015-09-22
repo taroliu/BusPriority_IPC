@@ -188,8 +188,10 @@ Module Module_PacketageSave  '-->BusPriority_daemon
             For i As Integer = 0 To (Val(sSubPhaseCount) - 1)
                 sLightStatus(i) = SaveData.Substring(22 + i * 14, 14)
             Next i
+            If Current_Planid = sPlanID Then  '20150922 只儲存目前時制計畫
+                Data_5F14 = New Class_5F14(sPlanID, sSubPhaseCount, sLightStatus, Now)
+            End If
 
-            Data_5F14 = New Class_5F14(sPlanID, sSubPhaseCount, sLightStatus, Now)
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
             WriteLog(curPath, "Module_SaveData", "SaveData_5FC4 Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
@@ -204,7 +206,9 @@ Module Module_PacketageSave  '-->BusPriority_daemon
             Dim sGreen As String = SaveData.Substring(26, 4 * Val(sSubPhaseCount))
             Dim sCycleTime As String = SaveData.Substring(26 + 4 * Val(sSubPhaseCount), 4)
             Dim sOffset As String = SaveData.Substring(26 + 4 * Val(sSubPhaseCount) + 4, 4)
-            Data_5F15 = New Class_5F15(sPlanID, sDirect, sPhaseOrder, sSubPhaseCount, sGreen, sCycleTime, sOffset, Now)
+            If Current_Planid = sPlanID Then  '20150922 只儲存目前時制計畫
+                Data_5F15 = New Class_5F15(sPlanID, sDirect, sPhaseOrder, sSubPhaseCount, sGreen, sCycleTime, sOffset, Now)
+            End If
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
             WriteLog(curPath, "Module_SaveData", "SaveData_5FC5 Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
