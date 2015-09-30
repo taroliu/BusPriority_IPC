@@ -127,6 +127,7 @@ Module Module_Comm
                     Loop
 
                     If SendString.Substring(0, 4) = "AABB" Then
+                        SetNowLog(SendString, False) 'jason20150930未下成功重傳.
                         DiffTimeOfTC_Request = Now 'Jason20150527三分鐘未收到TC封包,回報IPC通訊異常
                         SaveDataFunction(SendString) 'Save Data Struct
                         If _ConnectFlag_CC Or _ConnectFlag_ATMS Then
@@ -367,6 +368,48 @@ Module Module_Comm
         'WriteLog(curPath, "SerialComm", "[Read] " + ByteArrayToStr2(cData), _logEnable)
         InsertAcceptPoolArray(cData, bRead)
     End Sub
+    'jason20150930未下成功重傳.
+    'S---------------------------------------------------------------------------
+    Public Sub SetNowLog(ByVal SendCommand As String, ByVal isSet As Boolean)
+        Try
+            Dim AcceptObj As New V3_Object(SendCommand)
+            If isSet Then
+                SyncLock SendNowLog_hash.SyncRoot
+                    If SendNowLog_hash.ContainsKey(AcceptObj.CommandSeq.ToString) Then
+                        SendNowLog_hash.Item(AcceptObj.CommandSeq.ToString) = ""
+                    Else
+                        SendNowLog_hash.Add(AcceptObj.CommandSeq.ToString, "")
+                    End If
+                End SyncLock
+            Else
+                SyncLock SendNowLog_hash.SyncRoot
+                    If SendNowLog_hash.ContainsKey(AcceptObj.CommandSeq.ToString) Then
+                        SendNowLog_hash.Item(AcceptObj.CommandSeq.ToString) = Now.ToString("yyyy-MM-dd HH:mm:ss")
+                    End If
+                End SyncLock
+            End If
+        Catch ex As Exception
+            WriteLog(curPath, "Module_Comm", "  SetNowLog Catch:" + ex.Message, _logEnable)
+        End Try
+    End Sub
+    Public Function isFeedBackNowLog(ByVal SendCommand As String) As Boolean
+        Try
+            Dim AcceptObj As New V3_Object(SendCommand)
+            SyncLock SendNowLog_hash.SyncRoot
+                If SendNowLog_hash.ContainsKey(AcceptObj.CommandSeq.ToString) Then
+                    If SendNowLog_hash.Item(AcceptObj.CommandSeq.ToString) <> "" Then
+                        Return True
+                    Else
+                        Return False
+                    End If
+                End If
+            End SyncLock
+        Catch ex As Exception
+            WriteLog(curPath, "Module_Comm", "  isBackNowLog Catch:" + ex.Message, _logEnable)
+        End Try
+        Return False
+    End Function
+    'E---------------------------------------------------------------------------
     '************************************************************************************************
     '**
     '** SOCKET Create(中心端) UDP
@@ -375,7 +418,7 @@ Module Module_Comm
     Public ServerUDP_Socket As UdpClient
     Public ServerUDP_Socket_Send As UdpClient 'Jason 20150322 UDP CC
     Public _ConnectFlag_CC As Boolean = False
- 
+
     Public Sub OpenCC_Com()
         Try
             Dim RemoteIpEndPoint_Send As IPEndPoint = New IPEndPoint(IPAddress.Parse(IP_CC), Val(PORT_CC_Send)) 'Jason 20150322 UDP CC
@@ -391,7 +434,7 @@ Module Module_Comm
         End Try
     End Sub
 
-   
+
     Public Sub UDP_ReceiveData()
         Try
             Dim InBytesCount As Integer = 0
@@ -745,7 +788,7 @@ Module Module_Comm
         End Try
     End Function
 
- 
+
 
     '************************************************************************************************
     '**

@@ -276,23 +276,70 @@ Public Class MainForm
             WriteLog(curPath, "MainForm", "  send_IC_Manual Catch:" + ex.Message, True)
         End Try
     End Sub
+    'jason20150930未下成功重傳.
+    'S------------------------------------------------------------------------------
+    'OLD
+    'Public Sub send_IC(ByVal sendData As Byte())
+    '    Try
+    '        If mySerialPort.IsOpen Then
+    '            mySerialPort.Write(sendData, 0, sendData.Length)
+    '            'Show_LBox_ReceivedText_IC("[" + Date.Now.ToString("HH:mm:ss ") + "][w-->IC] " & ByteArrayToStr2(sendData))
+    '            Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData))
+    '            'LBox_IC.Items.Add("[" + Date.Now.ToString("HH:mm:ss ") + "][w-->IC] " & ByteArrayToStr2(sendData))
+    '            'WriteLog(curPath, "IC_comm", "[w-->IC] " + ByteArrayToStr2(sendData), _logEnable)
+    '        Else
+
+    '            WriteLog(curPath, "IC_comm", "[w-->IC] Serial Port Not Open!!!", _logEnable)
+    '        End If
+
+    '    Catch ex As Exception
+    '        WriteLog(curPath, "MainForm", "  send_IC Catch:" + ex.Message, True)
+    '    End Try
+    'End Sub
+    'NEW
+    Dim ICSendThread As Thread
     Public Sub send_IC(ByVal sendData As Byte())
         Try
-            If mySerialPort.IsOpen Then
-                mySerialPort.Write(sendData, 0, sendData.Length)
-                'Show_LBox_ReceivedText_IC("[" + Date.Now.ToString("HH:mm:ss ") + "][w-->IC] " & ByteArrayToStr2(sendData))
-                Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData))
-                'LBox_IC.Items.Add("[" + Date.Now.ToString("HH:mm:ss ") + "][w-->IC] " & ByteArrayToStr2(sendData))
-                'WriteLog(curPath, "IC_comm", "[w-->IC] " + ByteArrayToStr2(sendData), _logEnable)
-            Else
-
-                WriteLog(curPath, "IC_comm", "[w-->IC] Serial Port Not Open!!!", _logEnable)
-            End If
-
+            ICSendThread = New Thread(AddressOf SendIC_Thread)
+            ICSendThread.Name = "SendICThread"
+            ICSendThread.IsBackground = True
+            ICSendThread.Priority = ThreadPriority.Highest
+            ICSendThread.Start(sendData)
+           
         Catch ex As Exception
             WriteLog(curPath, "MainForm", "  send_IC Catch:" + ex.Message, True)
         End Try
     End Sub
+    Public Sub SendIC_Thread(ByVal sendData As Byte())
+        Try
+            If mySerialPort.IsOpen Then
+                SetNowLog(ByteArrayToStr2(sendData), True)
+                Dim V3Object As New V3_Object(ByteArrayToStr2(sendData))
+                If V3Object.CommandType = "0" Then
+                    Dim SendCount As Integer = 1
+                    Do
+                        If isFeedBackNowLog(ByteArrayToStr2(sendData)) Then
+                            Exit Do
+                        Else
+                            mySerialPort.Write(sendData, 0, sendData.Length)
+                            Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData) + " (" + SendCount.ToString + "次)")
+                        End If
+                        Thread.Sleep(Val(SendNowLog_SleepTime))
+                        SendCount += 1
+                    Loop Until SendCount > 5
+                Else
+                    mySerialPort.Write(sendData, 0, sendData.Length)
+                    Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData))
+                End If
+            Else
+                WriteLog(curPath, "IC_comm", "[w-->IC] Serial [" + mySerialPort.PortName.ToString + "] Port Not Open!!!", _logEnable)
+                Show_LBox_ReceivedText_IC("[w-->IC] Serial [" + mySerialPort.PortName.ToString + "] Port Not Open!!!")
+            End If
+        Catch ex As Exception
+            WriteLog(curPath, "MainForm", "  SendIC_Thread Catch:" + ex.Message, True)
+        End Try
+    End Sub
+    'E------------------------------------------------------------------------------
 
     Private Sub LBox_IC_ControlAdded(sender As System.Object, e As System.Windows.Forms.ControlEventArgs) Handles LBox_IC.ControlAdded
         If LBox_IC.Items.Count > LBox_limit Then

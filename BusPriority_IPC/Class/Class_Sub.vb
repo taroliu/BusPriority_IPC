@@ -3,8 +3,76 @@
 '** V3.0 structure
 '**
 '*********************************************************
+'jason20150930未下成功重傳.
+'S---------------------------------------------------------------------------
+Public Class V3_Object
+    Public CommandType As String '0-AABB,1-ACK,2-NAK
+    Public CommandSeq As Integer
+    Public CommandADDR As String
+    Public CommandLength As String
+    Public CommandHeader As String
+    Public CommandContext As String
+    Public CommandCRC As String
+    Public isNewCommand As Boolean  '非標準3.0=true
 
+    Public Sub New(ByVal initString As String)
+        Try
+            Select Case Trim(initString.Substring(0, 4))
+                Case "AABB"
+                    CommandType = "0"
+                    CommandLength = Val(HexStringTOIntString(initString.Substring(10, 4), 4))
+                    CommandHeader = initString.Substring(14, 4)
+                    CommandContext = initString.Substring(18, initString.Length - 24)
+                Case "AADD"
+                    CommandType = "1"
+                    CommandLength = 8
+                    CommandHeader = "ACK"
+                    CommandContext = ""
+                Case "AAEE"
+                    CommandType = "2"
+                    CommandLength = 9
+                    CommandHeader = "NAK"
+                    CommandContext = initString.Substring(14, 2)
+                Case Else
+                    CommandType = "-1"
+            End Select
+            If CommandType <> -1 Then
+                CommandSeq = Val(HexStringTOIntString(initString.Substring(4, 2), 2))
+                CommandADDR = initString.Substring(6, 4)
+                CommandCRC = Right(initString, 2)
+                If CommandHeader = "0F80" Or CommandHeader = "0F81" Or CommandHeader = "0F8F" Or CommandHeader = "0F8E" Or CommandHeader = "0F10" Or CommandHeader = "0F90" Or
+                   CommandHeader = "0F40" Or CommandHeader = "0FC0" Or CommandHeader = "0F00" Or CommandHeader = "0F11" Or CommandHeader = "0F91" Or CommandHeader = "0F41" Or
+                   CommandHeader = "0FC1" Or CommandHeader = "0F12" Or CommandHeader = "0F92" Or CommandHeader = "0F42" Or CommandHeader = "0FC2" Or CommandHeader = "0F02" Or
+                   CommandHeader = "0F13" Or CommandHeader = "0F43" Or CommandHeader = "0FC3" Or CommandHeader = "0F14" Or CommandHeader = "0F44" Or CommandHeader = "0FC4" Or
+                   CommandHeader = "0F04" Or CommandHeader = "0F15" Or CommandHeader = "0F45" Or CommandHeader = "0FC5" Or CommandHeader = "0F16" Or CommandHeader = "0F46" Or
+                   CommandHeader = "0FC6" Or CommandHeader = "0F47" Or CommandHeader = "0FC7" Or CommandHeader = "5F10" Or CommandHeader = "5F40" Or CommandHeader = "5FC0" Or
+                   CommandHeader = "5F00" Or CommandHeader = "5F11" Or CommandHeader = "5F41" Or CommandHeader = "5FC1" Or CommandHeader = "5F01" Or CommandHeader = "5F12" Or
+                   CommandHeader = "5F42" Or CommandHeader = "5FC2" Or CommandHeader = "5F02" Or CommandHeader = "5F13" Or CommandHeader = "5F43" Or CommandHeader = "5FC3" Or
+                   CommandHeader = "5F03" Or CommandHeader = "5F14" Or CommandHeader = "5F44" Or CommandHeader = "5FC4" Or CommandHeader = "5F15" Or CommandHeader = "5F45" Or
+                   CommandHeader = "5FC5" Or CommandHeader = "5F16" Or CommandHeader = "5F46" Or CommandHeader = "5FC6" Or CommandHeader = "5F17" Or CommandHeader = "5F47" Or
+                   CommandHeader = "5FC7" Or CommandHeader = "5F18" Or CommandHeader = "5F48" Or CommandHeader = "5FC8" Or CommandHeader = "5F19" Or CommandHeader = "5F49" Or
+                   CommandHeader = "5FC9" Or CommandHeader = "5F09" Or CommandHeader = "5F1A" Or CommandHeader = "5F4A" Or CommandHeader = "5FCA" Or CommandHeader = "5F1B" Or
+                   CommandHeader = "5F4B" Or CommandHeader = "5FCB" Or CommandHeader = "5F1C" Or CommandHeader = "5F4C" Or CommandHeader = "5FCC" Or CommandHeader = "5F0C" Or
+                   CommandHeader = "5F1D" Or CommandHeader = "5F1E" Or CommandHeader = "5F4E" Or CommandHeader = "5FCE" Or CommandHeader = "5F2F" Or CommandHeader = "5F5F" Or
+                   CommandHeader = "5FDF" Or CommandHeader = "5F31" Or CommandHeader = "5F61" Or CommandHeader = "5FE1" Or CommandHeader = "5F32" Or CommandHeader = "5F62" Or
+                   CommandHeader = "5FE2" Or CommandHeader = "5F33" Or CommandHeader = "5F63" Or CommandHeader = "5FE3" Or CommandHeader = "5F08" Or CommandHeader = "5F0A" Or
+                   CommandHeader = "5F0B" Or CommandHeader = "5F3F" Or CommandHeader = "5F6F" Or CommandHeader = "5FE6" Or CommandHeader = "5F0F" Or CommandHeader = "5F3E" Or
+                   CommandHeader = "5F6E" Or CommandHeader = "5FEE" Or CommandHeader = "5F0E" Or CommandHeader = "5F19" Then
+                    isNewCommand = False
+                Else
+                    isNewCommand = True
+                End If
+            End If
 
+        Catch ex As Exception
+            Dim trace As New System.Diagnostics.StackTrace(ex, True)
+            WriteLog(curPath, "GModule_Comm_Level_1", "V3_Object NEW  Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
+        End Try
+    End Sub
+
+End Class
+
+'E---------------------------------------------------------------------------
 Public Class Class_5F10
     Public ControlStrategy As Byte
     Public EffectTime As Byte

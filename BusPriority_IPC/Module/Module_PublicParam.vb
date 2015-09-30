@@ -145,6 +145,8 @@ Module Module_PublicParam
 
     Public DiffTimeOfTC_Request As DateTime  'Jason20150527三分鐘未收到TC封包,回報IPC通訊異常
 
+    Public SendNowLog_hash As New Hashtable  'jason20150930未下成功重傳.
+    Public SendNowLog_SleepTime As String 'jason20150930未下成功重傳.
     Public Sub setWorkFolderPath()
         Dim nIndex As Integer
         curPath = Trim(System.Reflection.Assembly.GetExecutingAssembly().Location)
@@ -214,7 +216,7 @@ Module Module_PublicParam
             OTARebootFlag = Val(GetIniInfo(strIniFile, "OTARebootFlag", "0")) 'Jason 20150205 OTA Modify
 
             isRunSystemFromCC = GetIniInfo(strIniFile, "isRunSystemFromCC", "1") '總開關協定控制
-
+            SendNowLog_SleepTime = GetIniInfo(strIniFile, "SendTimeSleep", "300") 'jason20150930未下成功重傳.
         Catch ex As Exception
             Dim trace As New System.Diagnostics.StackTrace(ex, True)
             WriteLog(curPath, "Module_PublicParam", "getAll_ParamINI Catch(" + trace.GetFrame(0).GetFileLineNumber().ToString + ")" + ex.Message, _logEnable)
