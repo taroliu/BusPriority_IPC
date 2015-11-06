@@ -400,7 +400,16 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Dim tempint As Integer = 0
                         Dim original_amount = 0
 
+                        Try                            
+                            TotalPhase = Data_5F13.SubPhaseCount.ToString
+                            _mainForm.Show_LBox_PolicyRightNowText(" Total phase " + TotalPhase.ToString)
+
+                        Catch ex As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText("Error Can't get the total phase " + ex.StackTrace)
+                        End Try
+
                         Try
+
                             Now_Green = CurrentGreen(Data_5F15.Green(index))
                             small_Green = MinGreen(Data_5F14.LightStatus(index))
 
@@ -413,9 +422,10 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                                 tempindex = index - 1
                             End If
 
+                            _mainForm.Show_LBox_PolicyRightNowText(" tempindex " + tempindex.ToString + " TotalPhaseInt " + TotalPhaseInt.ToString)
                             big_Green = Now_Green + MinGreen(Data_5F14.LightStatus(tempindex)) + 10
 
-                            _mainForm.Show_LBox_PolicyRightNowText(" 正常綠 " + Now_Green.ToString + " 最小綠 " + small_Green.ToString + " pedflash " + PedFlash.ToString)
+                            _mainForm.Show_LBox_PolicyRightNowText(" 正常綠 " + Now_Green.ToString + " 最小綠 " + small_Green.ToString + " pedflash " + PedFlash.ToString + " Big Green " + big_Green.ToString)
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText(" Error in Getting Now_Green small_Green big_Green " + ex.Message)
                         End Try

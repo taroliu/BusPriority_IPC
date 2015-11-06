@@ -210,6 +210,8 @@ Module Module_Policy_1
 
                             sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
                             _mainForm.send_IC(sendByte)
+                            Thread.Sleep(500)
+                            _mainForm.send_IC(sendByte)
                             A1_Counter = 1
 
                         End If
@@ -1153,7 +1155,17 @@ Module Module_Policy_1
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 88 " + ex.Message)
                     End Try
+                ElseIf _mainForm.Label_BusPrimEnable.Text <> "啟動" Then
+                    _mainForm.Show_LBox_PolicyRightNowText(" 公車優先關閉 不執行公車優先 ")
+                    Try
+                        FiveFB4.Add("Strategy", "E9")
+                        FiveFB4.Add("Play2", "NoChange")
+                    Catch ex As Exception
+                        _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy E9 " + ex.Message)
+                    End Try
+
                 End If
+
 
             End If
         Catch ex As Exception
@@ -1169,6 +1181,7 @@ Module Module_Policy_1
 
 
         Try
+            
             If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False And SlowBusID.ContainsKey(AcceptA2.BusID.ToString) = False And PayBack_Status = False Then
                 'If _mainForm.Label_BusPrimEnable.Text = "啟動" And BusPrime_activate = False Then
 
@@ -1181,7 +1194,7 @@ Module Module_Policy_1
                 Try
                     'FiveFB4.Add("P22", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                     FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
-                    StartRec_TimeStamp = Now                 
+                    StartRec_TimeStamp = Now
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
                 End Try
@@ -1383,7 +1396,7 @@ Module Module_Policy_1
 
                 Next
 
-                
+
 
 
                 FiveFB4.Add("Play1", Pplay1)
@@ -1420,7 +1433,7 @@ Module Module_Policy_1
                 Catch ex As Exception
                     _mainForm.Show_LBox_PolicyRightNowText("Error on extention" + ex.StackTrace)
                 End Try
-                
+
 
                 'Dim Point1 As String = "25.072813,121.576059"  
                 'Dim Point2 As String = "25.073241,121.577815"
@@ -1843,7 +1856,18 @@ Module Module_Policy_1
                     Catch ex As Exception
                         _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy 88 " + ex.Message)
                     End Try
+
+                ElseIf _mainForm.Label_BusPrimEnable.Text <> "啟動" Then
+                    _mainForm.Show_LBox_PolicyRightNowText(" 公車優先關閉 不執行公車優先 ")
+                    Try
+                        FiveFB4.Add("Strategy", "E9")
+                        FiveFB4.Add("Play2", "NoChange")
+                    Catch ex As Exception
+                        _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 Strategy E9 " + ex.Message)
+                    End Try
+
                 End If
+
 
             End If
         Catch ex As Exception

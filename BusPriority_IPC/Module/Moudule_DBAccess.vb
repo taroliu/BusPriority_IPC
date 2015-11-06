@@ -742,13 +742,15 @@ Module Moudule_DBAccess
 
                 If ds.Tables(0).Rows(i).Item(4).ToString = "00" Or ds.Tables(0).Rows(i).Item(4).ToString = "0" Then
                     BusGoBack_Direction.Add(ds.Tables(0).Rows(i).Item(0).ToString + "_1", Val(ds.Tables(0).Rows(i).Item(5)).ToString)
+                    '_mainForm.Show_LBox_PolicyRightNowText(" BusGoBack_Direction.Add " + ds.Tables(0).Rows(i).Item(0).ToString + "_1" + " , " + Val(ds.Tables(0).Rows(i).Item(5)).ToString)
                     '_mainForm.Show_LBox_PolicyRightNowText(" New Bus Route Key " + ds.Tables(0).Rows(i).Item(0).ToString + "_1")
                     '_mainForm.Show_LBox_PolicyRightNowText(" Go " + BusGoBack_Direction("1").ToString)
 
                 ElseIf ds.Tables(0).Rows(i).Item(4).ToString = "01" Or ds.Tables(0).Rows(i).Item(4).ToString = "1" Then
                     BusGoBack_Direction.Add(ds.Tables(0).Rows(i).Item(0).ToString + "_2", Val(ds.Tables(0).Rows(i).Item(5)).ToString)
+                    '_mainForm.Show_LBox_PolicyRightNowText(" BusGoBack_Direction.Add " + ds.Tables(0).Rows(i).Item(0).ToString + "_2" + " , " + Val(ds.Tables(0).Rows(i).Item(5)).ToString)
                     '_mainForm.Show_LBox_PolicyRightNowText(" New Bus Route Key " + ds.Tables(0).Rows(i).Item(0).ToString + "_2")
-                    '_mainForm.Show_LBox_PolicyRightNowText(" Back " + BusGoBack_Direction("2"))
+                    '_mainForm.Show_LBox_PolicyRightNowText(" Back " + BusGoBack_Direction("2").ToString)
                 End If
 
 
