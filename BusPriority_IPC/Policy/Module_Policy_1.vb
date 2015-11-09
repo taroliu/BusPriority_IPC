@@ -458,7 +458,7 @@ Module Module_Policy_1
                         StopRec_TimeStamp = Now
 
                     Catch tx As Exception
-
+                        _mainForm.Show_LBox_PolicyRightNowText("Error in  AcceptA2_Procedure_1 " + tx.Message)
                     End Try
 
 

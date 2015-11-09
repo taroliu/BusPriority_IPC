@@ -1309,7 +1309,7 @@ Public Class MainForm
                 Dim DiffSecond As Integer = DateDiff(DateInterval.Second, BusComm_TimeStamp, Now)
 
                 If DiffSecond > 10 Then
-                    '_mainForm.Show_LBox_PolicyRightNowText("Lost Communication with Bus ")
+                    _mainForm.Show_LBox_PolicyRightNowText("Lost Communication with Bus ")
 
                     If FiveFB4.Count > 0 Then
 
@@ -1322,7 +1322,8 @@ Public Class MainForm
                             '_mainForm.send_IC(sendByte)
                             '_mainForm.Show_LBox_PolicyRightNowText("離開點 啟動補償機制")
                             A1_Counter = 0
-                            ActivatedBusID.Remove(FiveFB4("BusID"))
+
+
                             Try
                                 'FiveFB4.Add("P32", DateTime.Today.ToString("yyyy") + DateTime.Today.ToString("MM") + DateTime.Today.ToString("dd") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"))
                                 FiveFB4.Add("P3", Now.ToString("yyyy-MM-dd HH:mm:ss"))
@@ -1356,6 +1357,12 @@ Public Class MainForm
                             'Dim FiveFB4byte As Byte() = Incode_Step1(getSeqNum(), MarkAACommand(FiveFB4Str))
                             'Dim tempstr As String = ByteArrayToStr2(FiveFB4byte)
                             '_mainForm.Show_LBox_PolicyRightNowText("5FB4 message " + tempstr)
+                            Try
+                                ActivatedBusID.Remove(FiveFB4("BusID"))
+                            Catch ex As Exception
+                                _mainForm.Show_LBox_PolicyRightNowText("Error in BusComm_Tick  ActivatedBusID.Remove(FiveFB4(BusID)) " + ex.Message)
+                            End Try
+
 
                             FiveFB4.Clear()
                             'BusComm_CommunicationStamp.Clear()
@@ -1381,7 +1388,7 @@ Public Class MainForm
                     BusComm_CommunicationStamp.Clear()
                     BusComm_TimeStamp = Nothing
 
-                    _mainForm.Show_LBox_PolicyRightNowText("Bus left, Clear all  Bus Commands ")
+                    _mainForm.Show_LBox_PolicyRightNowText("Bus left, Clear all  Bus Commands 2")
                 Else
                     '_mainForm.Show_LBox_PolicyRightNowText("Communicating with Bus ")
 
