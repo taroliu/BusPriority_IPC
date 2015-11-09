@@ -1196,7 +1196,7 @@ Module Module_Policy_1
                     FiveFB4.Add("P2", Now.ToString("yyyy-MM-dd HH:mm:ss"))
                     StartRec_TimeStamp = Now
                 Catch ex As Exception
-                    _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 " + ex.Message)
+                    _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 P22 P2 AcceptA2_Procedure_3 " + ex.Message)
                 End Try
 
                 Dim CrossRoadID As String = _mainForm.TBox_CrossRoadID.Text.ToString
