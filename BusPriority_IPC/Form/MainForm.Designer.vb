@@ -24,8 +24,8 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Title5 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -214,6 +214,7 @@ Partial Class MainForm
         Me.Timer_AutoReport2CC = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_Auto0F04 = New System.Windows.Forms.Timer(Me.components)
         Me.BusComm = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer_IC_Buff = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel_Top.SuspendLayout()
@@ -2047,15 +2048,15 @@ Partial Class MainForm
         '
         'Chart_Data
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart_Data.ChartAreas.Add(ChartArea1)
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart_Data.ChartAreas.Add(ChartArea5)
         Me.Chart_Data.Location = New System.Drawing.Point(752, 37)
         Me.Chart_Data.Name = "Chart_Data"
         Me.Chart_Data.Size = New System.Drawing.Size(190, 106)
         Me.Chart_Data.TabIndex = 108
         Me.Chart_Data.Text = "Chart_Work"
-        Title1.Name = "Title1"
-        Me.Chart_Data.Titles.Add(Title1)
+        Title5.Name = "Title1"
+        Me.Chart_Data.Titles.Add(Title5)
         Me.Chart_Data.Visible = False
         '
         'But_Graph
@@ -2280,6 +2281,11 @@ Partial Class MainForm
         '
         Me.BusComm.Enabled = True
         Me.BusComm.Interval = 5000
+        '
+        'Timer_IC_Buff
+        '
+        Me.Timer_IC_Buff.Enabled = True
+        Me.Timer_IC_Buff.Interval = 300
         '
         'MainForm
         '
@@ -2523,5 +2529,6 @@ Partial Class MainForm
     Friend WithEvents Timer_AutoReport2CC As System.Windows.Forms.Timer
     Friend WithEvents Timer_Auto0F04 As System.Windows.Forms.Timer
     Friend WithEvents BusComm As System.Windows.Forms.Timer
+    Friend WithEvents Timer_IC_Buff As System.Windows.Forms.Timer
 
 End Class

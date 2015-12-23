@@ -37,7 +37,7 @@ Module Module_Policy_1
 
                     If A1_Counter = 0 And _mainForm.Label_BusPrimEnable.Text = "啟動" Then
                         Dim sendByte As Byte()
-                        Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
+                        Dim tranStr As String = "5F100C"   '5F10  路口手動 + 時相控制
 
                         If TotalCycleMin = "" Then
                             TotalCycleMin = "05"
@@ -56,7 +56,7 @@ Module Module_Policy_1
                         Try
                             FiveFB4.Add("BusLineID", SaveString(5))
                             FiveFB4.Add("GoBack", SaveString(6))
-                            FiveFB4.Add("BusID", "0" + SaveString(2))
+                            FiveFB4.Add("BusID", SaveString(2))
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText(" Error FiveFB4 BusLineID GoBack BusID " + ex.Message)
                         End Try
@@ -199,7 +199,7 @@ Module Module_Policy_1
 
                         If A1_Counter = 0 And _mainForm.Label_BusPrimEnable.Text = "啟動" Then
                             Dim sendByte As Byte()
-                            Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
+                            Dim tranStr As String = "5F100C"   '5F10  路口手動 + 時相控制
 
                             If TotalCycleMin = "" Then
                                 TotalCycleMin = "05"
@@ -244,6 +244,9 @@ Module Module_Policy_1
                                     FiveFB4.Clear()
                                     FiveFB4.Add("GroupID", _mainForm.TBox_GroupID.Text.ToString)
                                     FiveFB4.Add("CrossRoadID", _mainForm.TBox_CrossRoadID.Text.ToString)
+                                    FiveFB4.Add("BusLineID", SaveString(5))
+                                    FiveFB4.Add("GoBack", SaveString(6))
+                                    FiveFB4.Add("BusID", SaveString(2))
                                 Catch ex As Exception
                                     _mainForm.Show_LBox_PolicyRightNowText("Error FiveFB4 GroupID CrossRoadID " + ex.Message)
 
@@ -256,7 +259,7 @@ Module Module_Policy_1
 
 
                                     Dim sendByte As Byte()
-                                    Dim tranStr As String = "5F1014"   '5F10  路口手動 + 時相控制
+                                    Dim tranStr As String = "5F100C"   '5F10  路口手動 + 時相控制
 
                                     If TotalCycleMin = "" Then
                                         TotalCycleMin = "05"

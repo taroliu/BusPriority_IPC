@@ -95,7 +95,7 @@ Module Module_File
             If isInit Then
                 writeFile.WriteLine(Date.Now.ToString("yyyy/MM/dd HH:mm:ss ") & "create this file")
             Else
-                writeFile.WriteLine(Date.Now.ToString("yyyy/MM/dd HH:mm:ss ") & vbTab & sLogMsg)
+                writeFile.WriteLine(Date.Now.ToString("yyyy/MM/dd HH:mm:ss.fff ") & vbTab & sLogMsg)
             End If
             writeFile.Flush()
             'writeFile.Close()

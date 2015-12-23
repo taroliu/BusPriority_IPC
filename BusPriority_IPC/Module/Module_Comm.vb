@@ -346,7 +346,8 @@ Module Module_Comm
 
                     '_mainForm.Show_LBox_PolicyRightNowText("Last Phase  " + LastSubPhaseIDstring.ToString)
 
-                    mySerialPort.Write(sendByte2, 0, sendByte2.Length)
+                    'mySerialPort.Write(sendByte2, 0, sendByte2.Length)
+                    'Add2IC_Buff(sendByte2)
 
                 Else
                     Exit While
@@ -1046,6 +1047,22 @@ Module Module_Comm
             'E-----------------------------------------------------------------------
         Catch ex As Exception
             WriteLog(curPath, "Module_Comm", "RunOTAResponse Catch:" + ex.Message, _logEnable)
+        End Try
+    End Sub
+    Public Sub Add2IC_Buff(ByVal SendCommand As Byte())
+        Try
+            SyncLock IC_Comm_Buffer_List.SyncRoot
+                If IC_Comm_Buffer_List.Contains(SendCommand) Then
+                    '_mainForm.Show_LBox_PolicyRightNowText("--- Already in IC Buff " + ByteArrayToStr2(SendCommand))
+                Else
+                    IC_Comm_Buffer_List.Add(SendCommand)
+                    '_mainForm.Show_LBox_PolicyRightNowText("+++ Added2 IC Buff " + ByteArrayToStr2(SendCommand))
+                End If
+               
+            End SyncLock
+
+        Catch ex As Exception
+            WriteLog(curPath, "Module_Comm", "Add2IC_Buff Catch:" + ex.Message, _logEnable)
         End Try
     End Sub
 End Module

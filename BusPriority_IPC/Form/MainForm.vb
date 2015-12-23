@@ -269,9 +269,10 @@ Public Class MainForm
     End Sub
     Public Sub send_IC_Manual(ByVal sendData As Byte())
         Try
-            mySerialPort.Write(sendData, 0, sendData.Length)
-            LBox_IC.Items.Add("[" + Date.Now.ToString("HH:mm:ss ") + "][Manual-Send] " & ByteArrayToStr2(sendData))
-            WriteLog(curPath, "IC_comm", "[Manual-Send] " + ByteArrayToStr2(sendData), _logEnable)
+            'mySerialPort.Write(sendData, 0, sendData.Length)
+            Add2IC_Buff(sendData)
+            'LBox_IC.Items.Add("[" + Date.Now.ToString("HH:mm:ss ") + "][Manual-Send] " & ByteArrayToStr2(sendData))
+            'WriteLog(curPath, "IC_comm", "[Manual-Send] " + ByteArrayToStr2(sendData), _logEnable)
         Catch ex As Exception
             WriteLog(curPath, "MainForm", "  send_IC_Manual Catch:" + ex.Message, True)
         End Try
@@ -321,15 +322,18 @@ Public Class MainForm
                         If isFeedBackNowLog(ByteArrayToStr2(sendData)) Then
                             Exit Do
                         Else
-                            mySerialPort.Write(sendData, 0, sendData.Length)
+                            'mySerialPort.Write(sendData, 0, sendData.Length)
+                            Add2IC_Buff(sendData)
                             Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData) + " (" + SendCount.ToString + "次)")
                         End If
-                        Thread.Sleep(Val(SendNowLog_SleepTime))
+                        'Thread.Sleep(Val(SendNowLog_SleepTime))
+                        Thread.Sleep(600)
                         SendCount += 1
                     Loop Until SendCount > 5
                 Else
-                    mySerialPort.Write(sendData, 0, sendData.Length)
-                    Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData))
+                    'mySerialPort.Write(sendData, 0, sendData.Length)
+                    Add2IC_Buff(sendData)
+                    'Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData))
                 End If
             Else
                 WriteLog(curPath, "IC_comm", "[w-->IC] Serial [" + mySerialPort.PortName.ToString + "] Port Not Open!!!", _logEnable)
@@ -991,7 +995,7 @@ Public Class MainForm
                 End If
                 If complete_5F10_AutoDownload = 0 Then
                     Dim sendByte As Byte()
-                    Dim tranStr As String = "5F101400"
+                    Dim tranStr As String = "5F100C00"
                     sendByte = Incode_Step1(getSeqNum(), MarkAACommand(tranStr))
                     'send_IC(sendByte)
                     complete_5F10_AutoDownload = 1
@@ -1426,5 +1430,26 @@ Public Class MainForm
         End Try
 
 
+    End Sub
+
+    Private Sub Timer_IC_Buff_Tick(sender As System.Object, e As System.EventArgs) Handles Timer_IC_Buff.Tick
+        Try
+
+            SyncLock IC_Comm_Buffer_List.SyncRoot
+                If IC_Comm_Buffer_List.Count > 0 Then
+                    Dim Message As Byte() = IC_Comm_Buffer_List(0)
+                    mySerialPort.Write(Message, 0, Message.Length)
+                    '_mainForm.Show_LBox_PolicyRightNowText(">>Sent to IC " + ByteArrayToStr2(Message))
+                    Show_LBox_ReceivedText_IC("[w-->IC] * " + ByteArrayToStr2(Message))
+                    IC_Comm_Buffer_List.Remove(IC_Comm_Buffer_List(0))
+
+                    'Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData) + " (" + SendCount.ToString + "次)")
+                End If
+
+            End SyncLock
+
+        Catch ex As Exception
+            _mainForm.Show_LBox_PolicyRightNowText("Error in Timer_IC_Buff_Tick " + ex.Message)
+        End Try
     End Sub
 End Class

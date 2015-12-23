@@ -40,6 +40,8 @@ Module Module_PublicParam
 
     Public BackUP_P3_Monitor_List As New ArrayList
 
+    Public IC_Comm_Buffer_List As New ArrayList
+
     Public Abnormal_Plan As Boolean = False
 
     Public Current_Planid As String

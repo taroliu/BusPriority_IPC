@@ -291,7 +291,8 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                     
                     '_mainForm.Show_LBox_PolicyRightNowText("路口ID " + _mainForm.TBox_CrossRoadID.Text.ToString + " 第" + sSubPhaseID.ToString + "分相 Time Stamp  " + SaveData_5F03_TimeStamp.ToString)
 
-                    If _mainForm.Label_BusPrimEnable.Text = "啟動" And RanFullCycle = True Then
+                    'If _mainForm.Label_BusPrimEnable.Text = "啟動" And RanFullCycle = True Then
+                    If RanFullCycle = True Then
 
                         'SubPhase_Log(_mainForm.TBox_CrossRoadID.Text.ToString, sSubPhaseID.ToString, SaveData_5F03_TimeStamp)
                         Dim Greenint As Integer
@@ -305,7 +306,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Dim index As Integer = Val(SaveData_5F03_LastPhase) - 1
 
                         Try
-                            
+
                             Greenint = CurrentGreen(Data_5F15.Green(index))
                             Yellowrr = YellowplusRed(Data_5F14.LightStatus(index))
                             PedFlash = PedGreenFlashRed(Data_5F14.LightStatus(index))
@@ -378,7 +379,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                         If Rec = True Then
                             difference2 = difference
-                            
+
                         End If
 
                         Try
@@ -391,7 +392,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Catch lx As Exception
                             _mainForm.Show_LBox_PolicyRightNowText("Error in getting payback balance " + lx.Message)
                         End Try
-                       
+
 
                         'Dim Now_Green As Integer = PublicNormalGreen(index)
                         'Dim small_Green As Integer = PublicShortGreen(index)
@@ -400,7 +401,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Dim tempint As Integer = 0
                         Dim original_amount = 0
 
-                        Try                            
+                        Try
                             TotalPhase = Data_5F13.SubPhaseCount.ToString
                             _mainForm.Show_LBox_PolicyRightNowText(" Total phase " + TotalPhase.ToString)
 
@@ -429,7 +430,7 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Catch ex As Exception
                             _mainForm.Show_LBox_PolicyRightNowText(" Error in Getting Now_Green small_Green big_Green " + ex.Message)
                         End Try
-                        
+
 
                         If difference2 > 3 Then
                             If Now_Green = small_Green Then
