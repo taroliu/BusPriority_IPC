@@ -191,6 +191,7 @@ Module Module_Comm
                     'S------------------------------------------------------------------------------
                     Dim ack_seq As String = SendString.Substring(4, 2)
                     Dim sendByte2 As Byte() = Incode_Step1(Val(HexStringTOIntString(ack_seq, 2)), "ACK")
+                    Add2IC_Buff(sendByte2)  '20160112_Ack Report Modify
                     'E------------------------------------------------------------------------------
                     '處理步階解析及顯示
                     'S------------------------------------------------------------------------------
@@ -972,9 +973,10 @@ Module Module_Comm
                     _mainForm.Show_LBox_ReceivedText_ATMS("[R<--ATMS] " + SendString)
                     If SendString.Substring(0, 4) = "AABB" Then
                         SaveDataFunction(SendString) 'Save Data Struct
+                        Add2IC_Buff(StrToByteArray2(SendString)) '20160112_Ack Report Modify
                     End If
                     Thread.Sleep(50)
-                    _mainForm.send_IC(StrToByteArray2(SendString))
+                    '_mainForm.send_IC(StrToByteArray2(SendString)) '20160112_Ack Report Modify
 
                 End If
             Catch ex As Exception
