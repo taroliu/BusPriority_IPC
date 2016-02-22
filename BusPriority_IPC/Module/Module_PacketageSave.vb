@@ -306,6 +306,13 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                         Dim index As Integer = Val(SaveData_5F03_LastPhase) - 1
 
                         Try
+                            TotalPhase = Data_5F13.SubPhaseCount.ToString
+                            TotalPhaseInt = Convert.ToDecimal(TotalPhase)
+                        Catch ex As Exception
+                            _mainForm.Show_LBox_PolicyRightNowText("Error Can't get the total phase in package save" + ex.StackTrace)
+                        End Try
+
+                        Try
 
                             Greenint = CurrentGreen(Data_5F15.Green(index))
                             Yellowrr = YellowplusRed(Data_5F14.LightStatus(index))
@@ -439,8 +446,8 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                             Else
 
-                                If (Now_Green - difference2) >= small_Green Then
-                                    tempint = Now_Green - difference2
+                                If (Now_Green - difference2 - PedFlash) >= small_Green Then
+                                    tempint = Now_Green - difference2 - PedFlash
 
                                     If tempint < 0 Then
                                         tempint = 0
@@ -454,7 +461,8 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                                     _mainForm.Show_LBox_PolicyRightNowText(" 存入補償命令 " + "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)
                                     original_amount = 0
 
-                                ElseIf (Now_Green - difference2) < small_Green Then
+                                ElseIf (Now_Green - difference2 - PedFlash) < small_Green Then
+                                    'tempint = small_Green - PedFlash
                                     tempint = small_Green - PedFlash
 
                                     If tempint <= 0 Then
@@ -475,9 +483,9 @@ Module Module_PacketageSave  '-->BusPriority_daemon
                                     If tempint = 0 Then
                                         original_amount = difference2 - (Now_Green - small_Green)
                                     ElseIf tempint > 0 Then
-                                        original_amount = difference2 - (Now_Green - (small_Green - PedFlash))
+                                        'original_amount = difference2 - (Now_Green - (small_Green - PedFlash))
+                                        original_amount = difference2 - (Now_Green - small_Green)
                                     End If
-
 
                                     _mainForm.Show_LBox_PolicyRightNowText(" 還需繼續從 " + SaveData_5F03_LastPhase + " 分相取回 " + original_amount.ToString + " 秒 ")
                                 End If
@@ -487,9 +495,12 @@ Module Module_PacketageSave  '-->BusPriority_daemon
 
                         ElseIf difference2 < -3 Then
                             Dim ABSTest As Integer = System.Math.Abs(difference2)
-
+                            'paybackamountStr = IntToHexString(Now_Green + ABSTest - PedFlash, 2)
                             paybackamountStr = IntToHexString(Now_Green + ABSTest - PedFlash, 2)
+
+                            'tempint = Now_Green + ABSTest - PedFlash
                             tempint = Now_Green + ABSTest - PedFlash
+
                             _mainForm.Show_LBox_PolicyRightNowText(" 應該將 " + SaveData_5F03_LastPhase + " 分相 正常綠 " + Now_Green.ToString + " 增加至 " + tempint.ToString + " 秒 ")
 
                             PayBack_Commands.Add(SaveData_5F03_LastPhase, "5F1C" + SaveData_5F03_LastPhase + "01" + paybackamountStr)

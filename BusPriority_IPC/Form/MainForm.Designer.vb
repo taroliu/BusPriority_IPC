@@ -24,8 +24,8 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Title5 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -2048,15 +2048,15 @@ Partial Class MainForm
         '
         'Chart_Data
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart_Data.ChartAreas.Add(ChartArea5)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart_Data.ChartAreas.Add(ChartArea2)
         Me.Chart_Data.Location = New System.Drawing.Point(752, 37)
         Me.Chart_Data.Name = "Chart_Data"
         Me.Chart_Data.Size = New System.Drawing.Size(190, 106)
         Me.Chart_Data.TabIndex = 108
         Me.Chart_Data.Text = "Chart_Work"
-        Title5.Name = "Title1"
-        Me.Chart_Data.Titles.Add(Title5)
+        Title2.Name = "Title1"
+        Me.Chart_Data.Titles.Add(Title2)
         Me.Chart_Data.Visible = False
         '
         'But_Graph
@@ -2285,7 +2285,7 @@ Partial Class MainForm
         'Timer_IC_Buff
         '
         Me.Timer_IC_Buff.Enabled = True
-        Me.Timer_IC_Buff.Interval = 300
+        Me.Timer_IC_Buff.Interval = 800
         '
         'MainForm
         '

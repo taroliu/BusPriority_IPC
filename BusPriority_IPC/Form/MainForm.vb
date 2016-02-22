@@ -22,7 +22,9 @@ Public Class MainForm
             If LBox_IC.Items.Count > LBox_limit Then
                 LBox_IC.Items.RemoveAt(0)
             End If
+
             WriteLog(curPath, "IC_comm", [text], _logEnable)
+            WriteLog(curPath, "IC_comm_New", [text], _logEnable)
         End If
     End Sub
 
@@ -327,7 +329,7 @@ Public Class MainForm
                             Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData) + " (" + SendCount.ToString + "次)")
                         End If
                         'Thread.Sleep(Val(SendNowLog_SleepTime))
-                        Thread.Sleep(600)
+                        Thread.Sleep(1000)
                         SendCount += 1
                     Loop Until SendCount > 5
                 Else
@@ -1441,6 +1443,7 @@ Public Class MainForm
                     mySerialPort.Write(Message, 0, Message.Length)
                     '_mainForm.Show_LBox_PolicyRightNowText(">>Sent to IC " + ByteArrayToStr2(Message))
                     Show_LBox_ReceivedText_IC("[w-->IC] * " + ByteArrayToStr2(Message))
+                    WriteLog(curPath, "IC_comm_New", "[w-->IC]  " + ByteArrayToStr2(Message), _logEnable)
                     IC_Comm_Buffer_List.Remove(IC_Comm_Buffer_List(0))
 
                     'Show_LBox_ReceivedText_IC("[w-->IC] " + ByteArrayToStr2(sendData) + " (" + SendCount.ToString + "次)")
